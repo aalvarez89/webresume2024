@@ -1,0 +1,32 @@
+.landing {
+
+    .title {
+        font-size: 5rem;
+        text-decoration: none;
+        user-select: none;
+        cursor: pointer;
+        text-align: left;
+        padding: 25px 0;
+    
+        &:hover {
+            text-decoration: underline;
+            color: #ffd166;
+          }
+          
+    }
+    
+    .portfolioMenu {
+        font-size: 5rem;
+        text-decoration: none;
+        user-select: none;
+        cursor: pointer;
+        text-align: left;
+        padding: 25px 0;
+    
+        &:hover {
+            text-decoration: underline;
+            color: #ffd166;
+          }
+          
+    }
+}
