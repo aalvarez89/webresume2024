@@ -29,7 +29,7 @@ const Landing = props => {
 
             <div className={css.menu}>
 
-                <div className={css.portfolioMenu} onClick={() => handleNavigate("bio")}>
+                <div className={`${currentTab === "bio" ? css.active : ""} ${css.portfolioMenu}`} onClick={() => handleNavigate("bio")}>
                 + HELLO
                 </div>
 
