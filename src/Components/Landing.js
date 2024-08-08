@@ -8,7 +8,7 @@ const Landing = props => {
     const navigate = useNavigate();
 
     // const {  } = props;
-    const [currentTab, setCurrentTab] = useState("home");
+    const [currentTab, setCurrentTab] = useState("home"); // current tab logic -> move to Shell component
     
     const location = useLocation();
     const { pathname } = location;
