@@ -33,36 +33,6 @@ export default function App() {
   //           </div>
   //         </>
   //       );
-  //     case "social":
-  //       return (
-  //         <>
-  //           <div>
-  //             <div>
-  //               <img
-  //                 className="github_logo"
-  //                 alt="github logo"
-  //                 src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-  //               />
-  //             </div>
-  //             <form>
-  //               <input type="text"></input>
-  //             </form>
-  //             <div onClick={() => setMenu("Menu")} className="back_button">
-  //               {" "}
-  //               &rsaquo;{" "}
-  //             </div>
-  //           </div>
-  //         </>
-  //       );
-  //     case "bio":
-  //     default:
-  //       return (
-  //         <>
-           
-  //         </>
-  //       );
-  //   }
-  // };
 
   
 
