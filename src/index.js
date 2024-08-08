@@ -1,6 +1,18 @@
+/**
+ * @module Global
+ * 
+ * @author Andrew Alvarez
+ * @copyright Copyright (c) 2024 Andrew Alvarez
+ * @license MIT
+ * 
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ * 
+ * Date: 2024-Aug-7
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
