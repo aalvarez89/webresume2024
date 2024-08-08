@@ -1,4 +1,13 @@
 import { useState } from "react";
+
+import { 
+  BrowserRouter as Router, Routes 
+} from 'react-router-dom';
+
+import DOMRoutes from './routes'
+
+import css from './Styles/App.module.scss';
+
 import BlogPost from "./Components/blogPost";
 import "./styles.css";
 
@@ -229,61 +238,70 @@ export default function App() {
   };
 
   return (
-    <div className="App">
-      <div
-        className={title}
-        onClick={() => setTitle("portfolioTitle portfolioTitleAnimation")}
-      >
-        I AM ANDREW
+    // <GlobalUserContext.Provider value={useGlobalUserState()}>
+      <div className={css.app}>
+        <Router>
+          {/* <Shell /> */}
+          <Routes>
+            { DOMRoutes }
+          </Routes>
+        </Router>
       </div>
-      <div className={menu}>
-        <div
-          className="portfolioMenu"
-          onClick={() => {
-            setSelection("bio");
-            setMenu("Menu MenuAnimation");
-          }}
-        >
-          + HELLO
-        </div>
-        <div
-          className="portfolioMenu"
-          onClick={() => {
-            setSelection("skills");
-            setMenu("Menu MenuAnimation");
-          }}
-        >
-          + SKILLS
-        </div>
-        <div
-          className="portfolioMenu"
-          onClick={() => {
-            setSelection("blog");
-            setMenu("Menu MenuAnimation");
-          }}
-        >
-          + MISSIVE
-        </div>
-        <div
-          className="portfolioMenu"
-          // onClick={() => {
-          //   setSelection("portfolio");
-          //   setMenu("Menu MenuAnimation");
-          // }}
-        >
-          + PORTFOLIO
-        </div>
-        <div
-          className="portfolioMenu"
-          onClick={() => {
-            setSelection("social");
-            setMenu("Menu MenuAnimation");
-          }}
-        >
-          + SOCIAL
-        </div>
-      </div>
-      <div className="Content">{generateContent(selection)}</div>
-    </div>
+    // </GlobalUserContext.Provider>
   );
+
+  // return (
+  //   <div className="App">
+  //     <div
+  //       className={title}
+  //       onClick={() => setTitle("portfolioTitle portfolioTitleAnimation")}
+  //     >
+  //       I AM ANDREW
+  //     </div>
+  //     <div className={menu}>
+  //       <div
+  //         className="portfolioMenu"
+  //         onClick={() => {
+  //           setSelection("bio");
+  //           setMenu("Menu MenuAnimation");
+  //         }}
+  //       >
+  //         + HELLO
+  //       </div>
+  //       <div
+  //         className="portfolioMenu"
+  //         onClick={() => {
+  //           setSelection("skills");
+  //           setMenu("Menu MenuAnimation");
+  //         }}
+  //       >
+  //         + SKILLS
+  //       </div>
+  //       <div
+  //         className="portfolioMenu"
+  //         onClick={() => {
+  //           setSelection("blog");
+  //           setMenu("Menu MenuAnimation");
+  //         }}
+  //       >
+  //         + MISSIVE
+  //       </div>
+  //       <div
+  //         className="portfolioMenu"
+  //       >
+  //         + PORTFOLIO
+  //       </div>
+  //       <div
+  //         className="portfolioMenu"
+  //         onClick={() => {
+  //           setSelection("social");
+  //           setMenu("Menu MenuAnimation");
+  //         }}
+  //       >
+  //         + SOCIAL
+  //       </div>
+  //     </div>
+  //     <div className="Content">{generateContent(selection)}</div>
+  //   </div>
+  // );
 }
