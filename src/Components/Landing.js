@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import css from '../Styles/Landing.module.scss'
 
@@ -21,7 +22,12 @@ const Landing = () => {
     }, [pathname, location])
     
     return (
-        <div className={css.landing}>
+        <motion.div 
+            className={css.landing}
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            >
             <div className={css.title} onClick={() => {}}>
                 I AM ANDREW
             </div>
@@ -49,7 +55,7 @@ const Landing = () => {
                 </div>
 
             </div>
-        </div>
+        </motion.div>
     );
 }
 
