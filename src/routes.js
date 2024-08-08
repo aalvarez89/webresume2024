@@ -5,7 +5,8 @@ import { Route } from 'react-router-dom'
 import {    Landing,
             Bio,
             Portfolio,
-            Skills
+            Skills,
+            Social
         // AdminPage
      } from './Components'
 
@@ -29,6 +30,7 @@ const Routes = [
     <Route key={`route-${RouteConstants.BIO}`}          exact path={RouteConstants.BIO}             element={<Bio />} />,
     <Route key={`route-${RouteConstants.PORTFOLIO}`}    exact path={RouteConstants.PORTFOLIO}       element={<Portfolio />} />,
     <Route key={`route-${RouteConstants.SKILLS}`}       exact path={RouteConstants.SKILLS}          element={<Skills />} />,
+    <Route key={`route-${RouteConstants.SOCIAL}`}       exact path={RouteConstants.SOCIAL}          element={<Social />} />,
     
     // <Route key={`route-${'private'}`} element={<PrivateRoutes/>}>
     // <Route key={`route-${RouteConstants.ADMIN}`}                exact path={RouteConstants.ADMIN}               element={<AdminPage />} />,
