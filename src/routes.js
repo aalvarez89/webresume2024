@@ -25,10 +25,10 @@ const RouteConstants = {
 
 const Routes = [
     
-    <Route key={`route-${RouteConstants.HOME}`}                 exact path={RouteConstants.HOME}                element={<Landing />} />,
-    <Route key={`route-${RouteConstants.BIO}`}                  exact path={RouteConstants.BIO}                 element={<Bio />} />,
-    <Route key={`route-${RouteConstants.PORTFOLIO}`}            exact path={RouteConstants.PORTFOLIO}           element={<Portfolio />} />,
-    <Route key={`route-${RouteConstants.SKILLS}`}               exact path={RouteConstants.SKILLS}              element={<Skills />} />,
+    <Route key={`route-${RouteConstants.HOME}`}         exact path={RouteConstants.HOME}            element={<Landing />} />,
+    <Route key={`route-${RouteConstants.BIO}`}          exact path={RouteConstants.BIO}             element={<Bio />} />,
+    <Route key={`route-${RouteConstants.PORTFOLIO}`}    exact path={RouteConstants.PORTFOLIO}       element={<Portfolio />} />,
+    <Route key={`route-${RouteConstants.SKILLS}`}       exact path={RouteConstants.SKILLS}          element={<Skills />} />,
     
     // <Route key={`route-${'private'}`} element={<PrivateRoutes/>}>
     // <Route key={`route-${RouteConstants.ADMIN}`}                exact path={RouteConstants.ADMIN}               element={<AdminPage />} />,
