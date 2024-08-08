@@ -3,11 +3,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 import css from '../Styles/Landing.module.scss'
 
-const Landing = props => {
+const Landing = () => {
 
     const navigate = useNavigate();
-
-    // const {  } = props;
+    
     const [currentTab, setCurrentTab] = useState("home"); // current tab logic -> move to Shell component
     
     const location = useLocation();
@@ -33,19 +32,19 @@ const Landing = props => {
                 + HELLO
                 </div>
 
-                <div className={css.portfolioMenu} onClick={() => {}}>
+                <div className={css.portfolioMenu} onClick={() => handleNavigate("skills")}>
                 + SKILLS
                 </div>
 
-                <div className={css.portfolioMenu} onClick={() => {}}>
+                <div className={css.portfolioMenu} onClick={() => handleNavigate("blog")}>
                 + MISSIVE
                 </div>
 
-                <div className={css.portfolioMenu} onClick={() => {}}>
+                <div className={css.portfolioMenu} onClick={() => handleNavigate("portfolio")}>
                 + PORTFOLIO
                 </div>
 
-                <div className={css.portfolioMenu} onClick={() => {}}>
+                <div className={css.portfolioMenu} onClick={() => handleNavigate("social")}>
                 + SOCIAL
                 </div>
 
