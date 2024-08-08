@@ -2,7 +2,8 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 
 
-import { Landing, 
+import { Landing,
+         Bio
         // AdminPage
      } from './Components'
 
@@ -23,7 +24,7 @@ const RouteConstants = {
 const Routes = [
     
     <Route key={`route-${RouteConstants.HOME}`}                 exact path={RouteConstants.HOME}                element={<Landing />} />,
-    // <Route key={`route-${RouteConstants.BIO}`}                 exact path={RouteConstants.BIO}                element={<Bio />} />,
+    <Route key={`route-${RouteConstants.BIO}`}                 exact path={RouteConstants.BIO}                element={<Bio />} />,
     // <Route key={`route-${RouteConstants.PORTFOLIO}`}                 exact path={RouteConstants.PORTFOLIO}                element={<PORTFOLIO />} />,
     // <Route key={`route-${RouteConstants.SKILLS}`}                 exact path={RouteConstants.SKILLS}                element={<SKILLS />} />,
     
