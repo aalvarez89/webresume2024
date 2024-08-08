@@ -23,7 +23,7 @@ const Bio = () => {
                   alt="profile-andrew"
                 />
               </div>
-              <p className="bio-description">
+              <div className="bio-description">
                 <p className="bio-title">Hi, I'm Andrew</p>
                 <p>UI Designer</p>
                 <p>Media Developer</p>
@@ -35,7 +35,7 @@ const Bio = () => {
                   build interfaces and enrich them with media.{" "}
                 </p>
                 <div className="bio-geo">Origin: CCS-VZLA Based: TOR-CAN</div>
-              </p>
+              </div>
               <div onClick={() => handleNavigate("")} className="back_button">
                 {" "}
                 &rsaquo;{" "}
