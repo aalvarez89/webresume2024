@@ -1,4 +1,35 @@
 .landing {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 0;
+
+    .heroVideo {
+        width: 100%;
+        object-fit: fill;
+        filter: hue-rotate(-20deg);
+
+        position: relative;
+        z-index: 5;
+    }
+
+    .menuContainer {
+        position: fixed;
+        z-index: 10;
+
+        filter: invert(.1);
+
+        opacity: 0.6;
+    }
+
+
+
+
     .active {
         color: lightcoral;
     }
