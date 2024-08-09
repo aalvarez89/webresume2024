@@ -17,23 +17,4 @@ export default function App() {
       </div>
     // </GlobalUserContext.Provider>
   )
-
-  // const generateContent = (page) => {
-  //   switch (page) {
-      
-  //     case "blog":
-  //       return (
-  //         <>
-  //           <div className="subpage blog_page">
-  //             <BlogPost />
-  //             <div onClick={() => setMenu("Menu")} className="back_button">
-  //               {" "}
-  //               &rsaquo;{" "}
-  //             </div>
-  //           </div>
-  //         </>
-  //       );
-
-  
-
 }
