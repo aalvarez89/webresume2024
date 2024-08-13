@@ -1,3 +1,4 @@
+export {default as Shell} from './Shell'
 export {default as Landing} from './Landing'
 export {default as Bio} from './Bio'
 export {default as Portfolio} from './Portfolio'
