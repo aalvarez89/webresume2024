@@ -3,7 +3,7 @@ import { AnimatedRoutes } from './AnimatedRoutes';
 
 import css from './Styles/App.module.scss';
 
-import "./styles.css";
+// import "./styles.css";
 
 export default function App() {
 
