@@ -1,18 +1,27 @@
 // @import '../packages/design/Styles/Main.module.scss';
 
+*, body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scrollbar-width: none;
+}
 .app {
     // background-color: $bg-darkblue;
-    background-color: #d5d5d5;
+    background-color: #fff;
 
     text-align: center;
-    width: 100vw;
-    height: 100vh;
-    max-width: 100vw;
-    max-height: 100vh;
-
-    display: flex;
+    // width: 100vw;
+    // height: 100vh;
+    // max-width: 100vw;
+    // max-height: 100vh;
+    width: 100%;
+    min-height: 100vh;
 
     margin: 0;
+
+
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
