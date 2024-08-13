@@ -9,7 +9,7 @@ export const AnimatedRoutes = () => {
     const location = useLocation();
 
     return (
-        <AnimatePresence>
+        <AnimatePresence mode="wait" initial={false}>
             <Routes location={location} key={location.pathname}>
                 { DOMRoutes }
             </Routes>
