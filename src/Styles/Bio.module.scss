@@ -1,3 +1,130 @@
 .bio {
+    width: 100%;
+
     display: flex;
+    justify-content: center;
+
+    .accent {
+        color: #18e0a4;
+        &:hover {
+            border-bottom: 2px solid #18e0a4;
+
+        }
+    }
+
+    .bioHero {
+        display: grid;
+        grid-template-rows: 320px 50px 320px 1fr 160px;
+        grid-template-columns: 640px;
+        margin-top: 50px;
+    }
+    .topSection {
+        position: relative;
+        z-index: 1;
+    }
+    .pfpTop {
+        position: relative;
+        z-index: 2;
+    }
+    .topIntro {
+        font-size: 7em;
+        font-weight: 700;
+        color: #18e0a4;
+        position: absolute;
+        z-index: 3;
+        text-align: left;
+        top: -5px;
+        left: -190px;
+    }
+
+    .botSection {
+        position: relative;
+        z-index: 1;
+    }
+    .pfpBot {
+        position: relative;
+        z-index: 2;
+    }
+    .botIntro {
+        display: flex;
+        font-size: 7em;
+        font-weight: 700;
+        color: #18e0a4;
+        position: absolute;
+        z-index: 3;
+        text-align: right;
+        top: 155px;
+        left: 135px;
+
+        & span {
+            margin-right: 40px;
+        }
+    }
+    .botIntroSig {
+        display: flex;
+        font-size: 3em;
+        color: #000;
+        position: absolute;
+        z-index: 4;
+        text-align: right;
+        top: 240px;
+        left: 650px;
+
+        & span {
+            margin-right: 40px;
+        }
+    }
+    
+
+    .midIntro {
+        width: 100%;
+        padding: 10px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-weight: 700;
+    }
+
+    .bioDescription {
+        font-size: 1.4em;
+        margin-top: 100px;
+        padding-bottom: 70px;
+
+        cursor: default;
+        & p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+    }
+
+    .bioCTA {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 200px;
+
+        & p {
+            font-size: 3em;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            
+            padding-bottom: 10px;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            .spacer {
+                margin-left: -5px;
+            }
+        }
+
+        &:hover {
+            
+            color: #18e0a4;
+        }
+    }
 }
