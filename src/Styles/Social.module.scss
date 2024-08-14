@@ -1,3 +1,76 @@
 .social {
+    width: 100%;
+
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        margin-top: 50px;
+        width: 980px;
+        text-align: justify;
+        font-size: 5.2em;
+        font-weight: 700;
+
+        display: flex;
+        flex-direction: column;
+
+        .titleBot {
+            text-align: right;
+        }
+
+        .accent {
+            color: #18e0a4;
+        }
+    }
+
+    .mediaLinks {
+        display: grid;
+        grid-template-columns: 450px 450px;
+        grid-template-rows: 40px 40px 120px;
+        gap: 80px;
+        margin-top: 50px;
+    }
+
+    .linkGrid {
+        display: grid;
+        grid-template-columns: 1fr 220px 40px;
+        align-items: center;
+        cursor: pointer;
+
+        border-bottom: 1px solid #18e0a4;
+
+        .network, .tag {
+            padding-bottom: 5px;
+        }
+        .network {
+            text-align: left;
+        }
+        .tag {
+            text-align: right;
+        }
+        &:hover .tag {
+            color: #18e0a4;
+        }
+    }
+
+    .inactive {
+        pointer-events: none;
+        color: lightgray;
+        text-decoration: line-through;
+    }
+
+    .disclaimer {
+        text-align: justify;
+        grid-area: 3 / 2 / 4 / 3;
+        font-size: 0.7em;
+        color: lightgray;
+        user-select: none;
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            color: #18e0a4;
+        }
+    }
 }
