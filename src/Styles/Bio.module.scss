@@ -1,14 +1,16 @@
+// #191716
 .bio {
     width: 100%;
 
     display: flex;
     justify-content: center;
+    // padding-top: 60px;
+
 
     .accent {
         color: #18e0a4;
         &:hover {
             border-bottom: 2px solid #18e0a4;
-
         }
     }
 
