@@ -1,3 +1,5 @@
+@import '../Styles/App.module.scss';
+
 .landing {
     width: 100%;
     height: calc(100vh - 60px);
@@ -11,8 +13,9 @@
 
     .heroVideo {
         width: 100%;
-        object-fit: fill;
-        filter: hue-rotate(-60deg);
+        object-fit: cover;
+        // filter: hue-rotate(-60deg) brightness(0.75);
+        filter: brightness(0.75);
 
         position: relative;
         z-index: 5;
@@ -31,24 +34,25 @@
     .menuContainer {
         position: fixed;
         z-index: 10;
+        color: #18e0a4;
+        // filter: invert(.1);
 
-        filter: invert(.1);
-
-        opacity: 0.6;
+        opacity: 0.95;
     }
 
     .title {
-        font-size: 5rem;
+        font-size: 7rem;
         text-decoration: none;
         user-select: none;
         cursor: pointer;
         text-align: left;
         padding: 25px 0;
+        font-family: 'Londona';
     
-        &:hover {
-            text-decoration: underline;
-            color: #ffd166;
-          }
+        // &:hover {
+        //     text-decoration: underline;
+        //     color: red;
+        //   }
           
     }
     

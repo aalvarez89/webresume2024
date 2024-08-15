@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { motion, useIsPresent } from "framer-motion";
 
-import heroVideo from "../Assets/15439973-uhd_3840_2160_30fps.mp4"
+// import heroVideo from "../Assets/15439973-uhd_3840_2160_30fps.mp4"
+import heroVideo from "../Assets/heroLanding2.mp4"
 
 import css from '../Styles/Landing.module.scss'
 
@@ -25,7 +26,7 @@ const Landing = () => {
             <div className={css.menuContainer}>
 
                 <div className={css.title}>
-                    I AM ANDREW
+                    KWEIZAR
                 </div>
 
                 <div className={css.menu}>
@@ -33,13 +34,13 @@ const Landing = () => {
                     + HELLO
                     </div>
 
-                    <div className={css.portfolioMenu} onClick={() => handleNavigate("skills")}>
+                    {/* <div className={css.portfolioMenu} onClick={() => handleNavigate("skills")}>
                     + SKILLS
                     </div>
 
                     <div className={css.portfolioMenu} onClick={() => handleNavigate("blog")}>
                     + MISSIVE
-                    </div>
+                    </div> */}
 
                     <div className={css.portfolioMenu} onClick={() => handleNavigate("portfolio")}>
                     + PORTFOLIO
