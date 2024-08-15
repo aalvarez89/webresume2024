@@ -1,4 +1,15 @@
 // @import '../packages/design/Styles/Main.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Londona';
+    src: url('../Assets/Fonts/Londona-reguler.otf') format('opentype');
+         font-weight: 500;
+         font-display: swap;
+         font-style: normal;
+  }
+
+  
 
 *, body {
     margin: 0;
@@ -6,6 +17,7 @@
 }
 html {
     scrollbar-width: none;
+    
 }
 .app {
     // background-color: $bg-darkblue;
@@ -21,10 +33,10 @@ html {
 
     margin: 0;
 
-
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+    font-family: 'Overpass';
+    // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    //     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    //     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
