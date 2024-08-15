@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { motion, useIsPresent } from "framer-motion";
+import { motion, useIsPresent } from "framer-motion";
 
 import profileTop from "../Assets/top_half.png"
 import profileBot from "../Assets/bottom_half.png"
@@ -10,7 +10,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import css from '../Styles/Bio.module.scss'
 
 const Bio = () => {
-  // const isPresent = useIsPresent();
+  const isPresent = useIsPresent();
     const navigate = useNavigate();
 
     const [introText, setIntroText] = useState("I'M")
@@ -34,12 +34,14 @@ const Bio = () => {
                 </div>
 
                 <div className={css.midIntro}>
-                  <div>
+                  <div style={{height: "100%", display: 'flex', flexDirection: "column", justifyContent: 'flex-end', paddingBottom: '3px'}}>
                     <div>ORIGIN - CARACAS, VZ</div>
                     <div>BASED - TORONTO, CA</div>
                   </div>
 
-                  <div>CODING SINCE 2017</div>
+                  <div style={{height: "100%", display: 'flex', flexDirection: "column", justifyContent: 'flex-end', paddingBottom: '3px'}}>
+                    <div>CODING SINCE 2017</div>
+                  </div>
                 </div>
 
                 <div className={css.botSection}>
@@ -50,7 +52,7 @@ const Bio = () => {
                   />
 
                   <p className={css.botIntro} onClick={() => setIntroText("SOY")}> <span>{introText}</span> ANDREW</p>
-                  <p className={css.botIntroSig}>ANDREW</p>
+                  {/* <p className={css.botIntroSig}>ANDREW</p> */}
                 </div>
 
                 <div className={css.bioDescription}>
@@ -65,10 +67,16 @@ const Bio = () => {
                 </div>
 
                 <div className={css.bioCTA}>
-                  <p onClick={() => handleNavigate("social")}>Let's talk <span className={css.spacer}><GoArrowUpRight /></span></p>
+                  <p onClick={() => handleNavigate("social")}>Let's talk <span className={css.spacer}><GoArrowUpRight size={36} /></span></p>
                 </div>
 
-                
+                <motion.div
+                initial={{ scaleX: 1 }}
+                animate={{ scaleX: 0, transition: { duration: 0.7, ease: "circOut" } }}
+                exit={{ scaleX: 1, transition: { duration: 0.7, ease: "circIn" } }}
+                style={{ originX: isPresent ? 0 : 1 }}
+                className={css.privacyScreen}
+            />
               </div>
 
         </div>
