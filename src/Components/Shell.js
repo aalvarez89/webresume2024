@@ -17,6 +17,7 @@ const Shell = () => {
 
     useEffect(() => {
         setCurrentTab(pathname.slice(1) || "home")
+        
     }, [pathname, location])
     
     return (
@@ -24,7 +25,7 @@ const Shell = () => {
             {
                 // pathname === "/" ? 
                 // null :
-                <div className={css.shell}>
+                <div className={css.shell} onClick={() => console.log(currentTab)}>
                     <div onClick={() => handleNavigate("")}>I'M ANDREW </div>
                     
                 </div>
