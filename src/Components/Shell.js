@@ -26,7 +26,7 @@ const Shell = () => {
                 // pathname === "/" ? 
                 // null :
                 <div className={css.shell} onClick={() => console.log(currentTab)}>
-                    <div onClick={() => handleNavigate("")}>I'M ANDREW </div>
+                    <div className={css.main} onClick={() => handleNavigate("")}>&#123; I'M ANDREW &#125;</div>
                     
                 </div>
 
