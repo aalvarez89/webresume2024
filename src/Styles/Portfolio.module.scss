@@ -2,8 +2,9 @@
     display: flex;
     padding-top: 60px;
     justify-content: center;
-    padding-bottom: 400px;
+
     .projectsContainer {
+        padding-bottom: 400px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -22,8 +23,6 @@
         
     }
     .project {
-        // max-width: 300px;
-        // padding: 1rem;
         box-sizing: border-box;
         margin-bottom: 20px;
         
@@ -35,7 +34,6 @@
         font-weight: 700;
         font-size: 48px;
         text-align: left;
-        // padding-left: 20px;
 
 
         // animation-name: example;
@@ -132,6 +130,9 @@
     .videoCot {
         object-fit: cover;
         filter: brightness(.8) ;
+    }
+    .videoLud {
+        object-fit: cover;
     }
 
 
