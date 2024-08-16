@@ -9,7 +9,7 @@ const Social = () => {
         window.open(url, "_blank", "noreferrer");
       };
     const openMailClient = e => {
-        window.location = 'contact@kweizar.ca';
+        window.location.href = 'mailto:hikweizar@gmail.com?subject=Kweizar Collab - Write your name here!';
         e.preventDefault();
       };
     
@@ -58,12 +58,12 @@ const Social = () => {
                     </div>
                 </div>
 
-                <div className={`${css.linkGrid} ${css.inactive}`} onClick={(e) => openMailClient(e)} > 
+                <div className={`${css.linkGrid}`} onClick={(e) => openMailClient(e)} > 
                     <div className={css.network}>
                         email
                     </div>
                     <div className={css.tag}>
-                        contact@kweizar.ca
+                    hikweizar@gmail.com
                     </div>
                     <div>
                         <GoArrowUpRight />
