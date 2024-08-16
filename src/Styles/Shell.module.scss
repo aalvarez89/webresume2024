@@ -15,7 +15,10 @@
         cursor: pointer;
         padding-left: 20px;
 
-        &:hover {
+        .brackets {
+            color: #F9A620
+        }
+        &:hover .brackets {
             color: #FF495C;
         }
     }
@@ -26,7 +29,7 @@
         color: #18e0a4;
         cursor: pointer;
         &:hover {
-            color: #F9A620
+            color: #F9A620;
         }
     }
 }
