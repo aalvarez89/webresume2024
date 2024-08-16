@@ -26,7 +26,7 @@ const Shell = () => {
         <>
             
             <div className={css.shell} onClick={() => console.log(currentTab)}>
-                <div className={css.main} onClick={() => handleNavigate("")}><span className={css.brackets}>&#123;</span> I'M ANDREW <span className={css.brackets}>&#125;</span></div>
+                <div className={css.main} onClick={() => handleNavigate("")}><span className={css.brackets}>&#123;</span>&nbsp; I'M ANDREW &nbsp;<span className={css.brackets}>&#125;</span></div>
                 <div className={css.resume}>
                     <Link to={resumePdf} target="_blank" download>My Resume</Link>
                 </div>

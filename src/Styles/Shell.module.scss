@@ -1,35 +1,40 @@
+@import './App.module.scss';
+
 .shell {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 60px;
-    color: #18e0a4;
-    background-color: #191716;
+    color: $grn;
+    background-color: $blk;
 
     position: fixed;
     z-index: 666;
 
     .main {
-        font-size: 24px;
+        font-size: 20px;
         cursor: pointer;
         padding-left: 20px;
+        display: flex;
+        align-items: center;
 
         .brackets {
-            color: #F9A620
+            color: $orn;
+            font-size: 28px;
         }
         &:hover .brackets {
-            color: #FF495C;
+            color: $red;
         }
     }
 
     .resume a {
         text-decoration: none;
         padding-right: 20px;
-        color: #18e0a4;
+        color: $grn;
         cursor: pointer;
         &:hover {
-            color: #F9A620;
+            color: $orn;
         }
     }
 }
