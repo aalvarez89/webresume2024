@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { motion, useIsPresent } from "framer-motion";
 
-// import heroVideo from "../Assets/15439973-uhd_3840_2160_30fps.mp4"
 import heroVideo from "../Assets/heroLanding2.mp4"
 
 import css from '../Styles/Landing.module.scss'

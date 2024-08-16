@@ -7,7 +7,29 @@
          font-weight: 500;
          font-display: swap;
          font-style: normal;
-  }
+}
+
+
+
+$grn: #18e0a4;
+$red: #FF495C;
+$orn: #F9A620;
+$ylw: #ffd166;
+$blu: #007991;
+$blk: #191716;
+$gry: #6C809A;
+$whi: #ffffff;
+
+:export {
+    red: $red;
+    grn: $grn;
+    orn: $orn;
+    ylw: $ylw;
+    gry: $gry;
+    blu: $blu;
+    blk: $blk;
+    whi: $whi;
+}
 
   
 
@@ -20,8 +42,7 @@ html {
     
 }
 .app {
-    // background-color: $bg-darkblue;
-    background-color: #fff;
+    background-color: $whi;
 
     text-align: center;
     // width: 100vw;
@@ -41,7 +62,3 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
-// #191716
-// #F9A620
-// #FF495C
-// #007991

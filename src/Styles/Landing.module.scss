@@ -1,4 +1,4 @@
-@import '../Styles/App.module.scss';
+@import './App.module.scss';
 
 .landing {
     width: 100%;
@@ -10,12 +10,13 @@
     position: relative;
 
     z-index: 0;
+    background-color: $blk;
 
     .heroVideo {
         width: 100%;
         object-fit: cover;
         // filter: hue-rotate(-60deg) brightness(0.75);
-        filter: brightness(0.75);
+        filter: brightness(0.8);
 
         position: relative;
         z-index: 5;
@@ -27,47 +28,70 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #18e0a4;
+        background-color: $grn;
         z-index: 20;
     }
 
     .menuContainer {
         position: fixed;
         z-index: 10;
-        color: #18e0a4;
-        // filter: invert(.1);
+        color: $grn;
 
         opacity: 0.95;
+        
+        
+        .title {
+            // font-size: 8rem;
+            text-decoration: none;
+            user-select: none;
+            text-align: left;
+            padding: 25px 0;
+            font-family: 'Londona';
+    
+        }
+
+        .portfolioMenu {
+            // font-size: 5rem;
+            text-decoration: none;
+            user-select: none;
+            cursor: pointer;
+            text-align: left;
+            padding: 25px 0;
+        
+            &:hover {
+                text-decoration: underline;
+                color: $ylw;
+              }
+              
+        }
     }
 
-    .title {
-        font-size: 7rem;
-        text-decoration: none;
-        user-select: none;
-        // cursor: pointer;
-        text-align: left;
-        padding: 25px 0;
-        font-family: 'Londona';
     
-        // &:hover {
-        //     text-decoration: underline;
-        //     color: red;
-        //   }
-          
-    }
-    
-    .portfolioMenu {
-        font-size: 5rem;
-        text-decoration: none;
-        user-select: none;
-        cursor: pointer;
-        text-align: left;
-        padding: 25px 0;
-    
-        &:hover {
-            text-decoration: underline;
-            color: #ffd166;
-          }
-          
-    }
 }
+@media only screen and (min-width: 1024px) {
+    /* CSS rules for desktops go here */
+    .title {
+        font-size: 8rem;
+    }
+
+    .portfolioMenu {
+        font-size: 2.5rem;
+    }
+  }
+
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile phones go here */
+    .menuContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .title {
+        font-size: 4.5rem;
+    }
+
+    .portfolioMenu {
+        font-size: 2.5rem;
+    }
+  }
