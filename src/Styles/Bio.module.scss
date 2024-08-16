@@ -1,4 +1,3 @@
-// #191716
 .bio {
     width: 100%;
 
@@ -13,7 +12,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: red;
+        background-color: #191716;
         z-index: 20;
     }
 
@@ -48,6 +47,8 @@
         top: -5px;
         left: -190px;
         font-family: 'Londona';
+
+        // -webkit-text-stroke: 2px #FF495C;
 
     }
 

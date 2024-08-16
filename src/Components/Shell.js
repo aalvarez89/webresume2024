@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
+import resumePdf from '../Assets/AndrewResume2024_ln.pdf'
 import css from '../Styles/Shell.module.scss'
 
 const Shell = () => {
@@ -22,15 +24,17 @@ const Shell = () => {
     
     return (
         <>
-            {
-                // pathname === "/" ? 
-                // null :
-                <div className={css.shell} onClick={() => console.log(currentTab)}>
-                    <div className={css.main} onClick={() => handleNavigate("")}>&#123; I'M ANDREW &#125;</div>
-                    
+            
+            <div className={css.shell} onClick={() => console.log(currentTab)}>
+                <div className={css.main} onClick={() => handleNavigate("")}>&#123; I'M ANDREW &#125;</div>
+                <div className={css.resume}>
+                    <Link to={resumePdf} target="_blank" download>My Resume</Link>
                 </div>
+                
+            </div>
 
-            }
+
+            
         </>
     )
 }

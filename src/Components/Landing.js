@@ -47,7 +47,7 @@ const Landing = () => {
                     </div>
 
                     <div className={css.portfolioMenu} onClick={() => handleNavigate("social")}>
-                    + SOCIAL
+                    + CONTACT
                     </div>
                 </div>
 
