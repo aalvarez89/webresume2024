@@ -97,6 +97,11 @@
 
         background-color: #18e0a4;
         cursor: pointer;
+        margin-bottom: 20px;
+
+        &:hover {
+            background-color:#FF495C;
+        }
 
     }
 
