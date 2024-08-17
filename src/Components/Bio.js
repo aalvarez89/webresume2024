@@ -33,13 +33,13 @@ const Bio = () => {
                   <p className={css.topIntro}>HELLO <br/> WORLD</p>
                 </div>
 
-                <div className={css.midIntro}>
-                  <div style={{height: "100%", display: 'flex', flexDirection: "column", justifyContent: 'flex-end', paddingBottom: '3px'}}>
+                <div className={css.midSection}>
+                  <div className={css.midDetails}>
                     <div>ORIGIN - CARACAS, VZ</div>
                     <div>BASED - TORONTO, CA</div>
                   </div>
 
-                  <div style={{height: "100%", display: 'flex', flexDirection: "column", justifyContent: 'flex-end', paddingBottom: '3px'}}>
+                  <div className={css.midDetails}>
                     <div>CODING SINCE 2017</div>
                   </div>
                 </div>
@@ -51,11 +51,12 @@ const Bio = () => {
                     alt="profile-andrew"
                   />
 
-                  <p className={css.botIntro} onClick={() => setIntroText("SOY")}> <span>{introText}</span> ANDREW</p>
+                  <p className={css.botIntro} onClick={() => setIntroText("SOY")}> <span className={css.selfText}>{introText}</span> ANDREW</p>
                   {/* <p className={css.botIntroSig}>ANDREW</p> */}
                 </div>
 
                 <div className={css.bioDescription}>
+                  <div className={css.bioTitle}>Hello World, <br/>I'm Andrew</div>
                   <p>I'm a <span className={css.accent}>full-stack</span> developer with hands-on experience and a passion for new
                   technologies, I have a keen interest in financial technologies, payment
                   systems, and business development
@@ -70,14 +71,15 @@ const Bio = () => {
                   <p onClick={() => handleNavigate("social")}>Let's talk <span className={css.spacer}><GoArrowUpRight size={36} /></span></p>
                 </div>
 
-                <motion.div
+              </div>
+
+              <motion.div
                 initial={{ scaleX: 1 }}
                 animate={{ scaleX: 0, transition: { duration: 0.7, ease: "circOut" } }}
                 exit={{ scaleX: 1, transition: { duration: 0.7, ease: "circIn" } }}
                 style={{ originX: isPresent ? 0 : 1 }}
                 className={css.privacyScreen}
-            />
-              </div>
+              />
 
         </div>
     );
@@ -96,5 +98,4 @@ export default Bio;
     I do software development and a digital design. I like to
     build interfaces and enrich them with media.{" "}
   </p>
-  <div className="bio-geo">Origin: CCS-VZLA Based: TOR-CAN</div>
 </div> */

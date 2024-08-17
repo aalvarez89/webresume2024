@@ -1,3 +1,5 @@
+@import './App.module.scss';
+
 .social {
     width: 100%;
 
@@ -6,10 +8,9 @@
     align-items: center;
 
     .title {
+        box-sizing: border-box;
         margin-top: 50px;
-        width: 980px;
         text-align: justify;
-        font-size: 5.2em;
         font-weight: 700;
 
         display: flex;
@@ -20,16 +21,14 @@
         }
 
         .accent {
-            color: #18e0a4;
+            color: $grn;
         }
     }
 
     .mediaLinks {
         display: grid;
-        grid-template-columns: 450px 450px;
-        grid-template-rows: 40px 40px 120px;
-        gap: 80px;
         margin-top: 50px;
+        box-sizing: border-box;
     }
 
     .linkGrid {
@@ -38,7 +37,7 @@
         align-items: center;
         cursor: pointer;
 
-        border-bottom: 1px solid #18e0a4;
+        border-bottom: 1px solid $grn;
 
         .network, .tag {
             padding-bottom: 5px;
@@ -50,27 +49,66 @@
             text-align: right;
         }
         &:hover .tag {
-            color: #18e0a4;
+            color: $grn;
         }
     }
 
     .inactive {
         pointer-events: none;
-        color: lightgray;
+        color: $gry;
         text-decoration: line-through;
     }
 
     .disclaimer {
         text-align: justify;
-        grid-area: 3 / 2 / 4 / 3;
         font-size: 0.7em;
-        color: lightgray;
+        color: $gry;
         user-select: none;
 
         .copyright {
             width: 100%;
             text-align: center;
-            color: #18e0a4;
+            color: $grn;
         }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* CSS rules for desktops go here */
+
+    .title {
+        width: 980px;
+        font-size: 5.2em;
+    }
+    .mediaLinks {
+        grid-template-columns: 450px 450px;
+        grid-template-rows: 40px 40px 120px;
+        gap: 80px;
+    }
+
+    .disclaimer {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile phones go here */
+
+    .title {
+        width: 100%;
+        font-size: 2.2em;
+        padding: 0px 10px;
+    }
+    
+    .mediaLinks {
+        padding: 0px 20px;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 25px 25px 25px 25px 1fr;
+        gap: 80px;
+    }
+
+    .disclaimer {
+        padding: 0px 20px;
     }
 }
