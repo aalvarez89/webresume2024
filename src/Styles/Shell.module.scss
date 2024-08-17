@@ -8,14 +8,15 @@
     height: 60px;
     color: $grn;
     background-color: $blk;
+    box-sizing: border-box;
 
     position: fixed;
     z-index: 666;
+    padding: 0px 20px;
 
     .main {
         font-size: 20px;
         cursor: pointer;
-        padding-left: 20px;
         display: flex;
         align-items: center;
 
@@ -28,13 +29,38 @@
         }
     }
 
+    .resume {
+        border-radius: 5px;
+
+    }
+
     .resume a {
         text-decoration: none;
-        padding-right: 20px;
-        color: $grn;
+        color: $blk;
+        padding: 5px 8px 3px 8px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
         cursor: pointer;
+
+    }
+    
+    .ctaGrn {
+        background-color: $grn;
         &:hover {
-            color: $orn;
+            background-image: linear-gradient(to right, $red , $ylw);
+        }
+    }
+    .ctaRed {
+        background-color: $red;
+        &:hover {
+            background-image: linear-gradient(to right, $ylw , $grn);
+        }
+    }
+    .ctaOrn {
+        background-color: $orn;
+        &:hover {
+            background-image: linear-gradient(to right, $grn , $red);
         }
     }
 }

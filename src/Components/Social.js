@@ -1,9 +1,12 @@
+import { motion, useIsPresent } from "framer-motion";
+
 import { GoArrowUpRight } from "react-icons/go";
 
 import css from '../Styles/Social.module.scss'
 
 const Social = () => {
-
+    
+    const isPresent = useIsPresent();
 
     const openInNewTab = (url) => {
         window.open(url, "_blank", "noreferrer");
@@ -63,7 +66,7 @@ const Social = () => {
                         email
                     </div>
                     <div className={css.tag}>
-                    hikweizar@gmail.com
+                        hikweizar&#64;gmail.com
                     </div>
                     <div>
                         <GoArrowUpRight />
@@ -78,6 +81,13 @@ const Social = () => {
                     </div>
                 </div>
             </div>
+            <motion.div
+                initial={{ scaleX: 1 }}
+                animate={{ scaleX: 0, transition: { duration: 0.7, ease: "circOut" } }}
+                exit={{ scaleX: 1, transition: { duration: 0.7, ease: "circIn" } }}
+                style={{ originX: isPresent ? 0 : 1 }}
+                className={css.privacyScreen}
+            />
         </div>
     )
 }

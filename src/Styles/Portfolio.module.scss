@@ -34,19 +34,14 @@
         transition: height 2s;
 
         font-weight: 700;
-        // font-size: 48px;
         text-align: left;
-
-
-        // animation-name: example;
-        // animation-duration: 4s;
 
         border-width: 3px;
         border-style: solid;
         border-image: 
             linear-gradient(
             to bottom, 
-            $grn, 
+            $red, 
             rgba(0, 0, 0, 0)
             ) 1 100%;
 
@@ -54,7 +49,7 @@
         .title {
             padding-left: 20px;
             &:hover {
-                color: $grn;
+                color: $red;
                 cursor: pointer;
             }
             font-family: 'Londona';
@@ -64,7 +59,11 @@
             padding-left: 20px;
             font-weight: 600;
             font-size: 1rem;
-            color: lightgray;
+            color: $gry;
+
+            .jobDivider {
+                color: $red;
+            }
         }
 
         ul {
@@ -75,12 +74,11 @@
             margin-top: 20px;
 
             li {
-                // width: 82%;
                 margin-bottom: 16px;
                 text-align: left;
 
                 &::marker {
-                    color: $grn;
+                    color: $red;
                   }
             }
         }
@@ -97,7 +95,7 @@
         height: 9px;
 
 
-        background-color: $grn;
+        background-color: $red;
         cursor: pointer;
         margin-bottom: 20px;
 
@@ -108,7 +106,7 @@
     }
 
     .vidContainer {
-        border-top: 3px solid $grn;
+        border-top: 3px solid $red;
         position: relative;
         top: -3px;
     }
@@ -138,22 +136,15 @@
     }
 
 
-    // @keyframes example {
-    //     0%   { border-image: 
-    //         linear-gradient(
-    //         to top, 
-    //         $grn, 
-    //         rgba(0, 0, 0, 0)
-    //         ) 1 100%;}
-    //     25%  {background-color: yellow;}
-    //     50%  {background-color: blue;}
-    //     100% { border-image: 
-    //         linear-gradient(
-    //         to top, 
-    //         rgba(0, 0, 0, 0),
-    //         $grn
-    //         ) 1 100%;}
-    //   }
+    .privacyScreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $red;
+        z-index: 20;
+    }
     
 }
 

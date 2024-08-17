@@ -21,7 +21,7 @@
         }
 
         .accent {
-            color: $grn;
+            color: $orn;
         }
     }
 
@@ -37,7 +37,7 @@
         align-items: center;
         cursor: pointer;
 
-        border-bottom: 1px solid $grn;
+        border-bottom: 1px solid $orn;
 
         .network, .tag {
             padding-bottom: 5px;
@@ -49,7 +49,7 @@
             text-align: right;
         }
         &:hover .tag {
-            color: $grn;
+            color: $orn;
         }
     }
 
@@ -68,8 +68,18 @@
         .copyright {
             width: 100%;
             text-align: center;
-            color: $grn;
+            color: $orn;
         }
+    }
+
+    .privacyScreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $orn;
+        z-index: 20;
     }
 }
 

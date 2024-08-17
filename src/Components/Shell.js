@@ -17,6 +17,17 @@ const Shell = () => {
         navigate(`/${page}`)
     }
 
+    const getCtaStyle = tab => {
+
+        switch (tab) {
+            // case "home": return css.ctaGrn;
+            case "portfolio": return css.ctaRed;
+            case "social": return css.ctaOrn;
+        
+            default: return css.ctaGrn;
+        }
+    }
+
     useEffect(() => {
         setCurrentTab(pathname.slice(1) || "home")
         
@@ -24,17 +35,15 @@ const Shell = () => {
     
     return (
         <>
-            
-            <div className={css.shell} onClick={() => console.log(currentTab)}>
+            <div className={css.shell} >
+            {/* // onClick={() => console.log(currentTab)}> */}
+
                 <div className={css.main} onClick={() => handleNavigate("")}><span className={css.brackets}>&#123;</span>&nbsp; I'M ANDREW &nbsp;<span className={css.brackets}>&#125;</span></div>
-                <div className={css.resume}>
-                    <Link to={resumePdf} target="_blank" download>My Resume</Link>
+                <div className={`${css.resume} ${getCtaStyle(currentTab)}`}>
+                    <Link to={resumePdf} target="_blank" download>RESUME</Link>
                 </div>
                 
             </div>
-
-
-            
         </>
     )
 }

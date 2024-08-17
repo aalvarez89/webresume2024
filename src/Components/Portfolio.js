@@ -1,6 +1,8 @@
 import { useState, useRef } from "react";
 // import { useNavigate } from "react-router-dom";
 
+import { motion, useIsPresent } from "framer-motion";
+
 import pegasusHero from "../Assets/pegasusHero2.mp4"
 import nuvoolaHero from "../Assets/nuvoolaHero2.mp4"
 import coteacherHero from "../Assets/coteacherHero.mp4"
@@ -11,14 +13,9 @@ import ludumHero from "../Assets/ludumHero.gif"
 import css from '../Styles/Portfolio.module.scss'
 
 const Portfolio = () => {
-
-    // const navigate = useNavigate();
+    const isPresent = useIsPresent();
 
     const [currentProject, setCurrentProject] = useState("")
-
-    // const handleNavigate = page => {
-    //     navigate(`/${page}`)
-    // }
     
     return (
         <div className={css.portfolio}>
@@ -192,6 +189,13 @@ const Portfolio = () => {
             {" "}
             &rsaquo;{" "}
         </div> */}
+            <motion.div
+                initial={{ scaleX: 1 }}
+                animate={{ scaleX: 0, transition: { duration: 0.7, ease: "circOut" } }}
+                exit={{ scaleX: 1, transition: { duration: 0.7, ease: "circIn" } }}
+                style={{ originX: isPresent ? 0 : 1 }}
+                className={css.privacyScreen}
+            />
         </div>
     )
 }
@@ -212,7 +216,7 @@ const Project = props => {
                     <div className={css.vidContainer}>
                         {
                             tag !== 'lud' ?
-                            <video autoPlay muted loop src={source} type="video/mp4" className={`${css.projectVideo} ${videoCss}`}>
+                            <video autoPlay muted loop playsInline src={source} type="video/mp4" className={`${css.projectVideo} ${videoCss}`}>
                                 Your browser does not support the video tag.
                             </video>
                             :
@@ -227,7 +231,7 @@ const Project = props => {
                     currentProject === tag  ? 
                     <>
                         <div className={css.jobInfo}>
-                            {role} <span style={{color: '#18e0a4'}}>|</span> {duration}
+                            {role} <span className={css.jobDivider}>|</span> {duration}
                         </div>
                         <div >{props.children}</div>
                     </>
@@ -243,6 +247,8 @@ const Project = props => {
                 :
                 null
             }
+
+            
             
         </div>
     )

@@ -10,7 +10,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import css from '../Styles/Bio.module.scss'
 
 const Bio = () => {
-  const isPresent = useIsPresent();
+    const isPresent = useIsPresent();
     const navigate = useNavigate();
 
     const [introText, setIntroText] = useState("I'M")
