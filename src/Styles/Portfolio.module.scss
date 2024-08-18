@@ -90,20 +90,7 @@
         transition: height 2s;
     }
 
-    .projectFooter {
-        width: 100px;
-        height: 9px;
-
-
-        background-color: $red;
-        cursor: pointer;
-        margin-bottom: 20px;
-
-        &:hover {
-            background-color: $red;
-        }
-
-    }
+    
 
     .vidContainer {
         border-top: 3px solid $red;
@@ -144,6 +131,21 @@
         bottom: 0;
         background-color: $red;
         z-index: 20;
+    }
+
+    .projectFooter {
+        width: 100%;
+        cursor: pointer;
+        margin-bottom: 20px;
+
+        &:hover .arrowUp {
+            color: $red;
+        }
+
+    }
+
+    .arrowUp {
+        color: $gry;
     }
     
 }

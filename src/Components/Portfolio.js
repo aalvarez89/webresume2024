@@ -1,7 +1,7 @@
-import { useState, useRef } from "react";
+import { useState, useRef } from "react"
 // import { useNavigate } from "react-router-dom";
 
-import { motion, useIsPresent } from "framer-motion";
+import { motion, useIsPresent } from "framer-motion"
 
 import pegasusHero from "../Assets/pegasusHero2.mp4"
 import nuvoolaHero from "../Assets/nuvoolaHero2.mp4"
@@ -11,6 +11,9 @@ import crankyHero from "../Assets/crankyHero2.mp4"
 import ludumHero from "../Assets/ludumHero.gif"
 
 import css from '../Styles/Portfolio.module.scss'
+
+import { BiUpArrow } from "react-icons/bi"
+
 
 const Portfolio = () => {
     const isPresent = useIsPresent();
@@ -243,7 +246,7 @@ const Project = props => {
 
             {
                 currentProject === tag  ? 
-                <footer className={css.projectFooter} onClick={() => {setCurrentProject(""); executeScroll()}}></footer>
+                <footer className={css.projectFooter} onClick={() => {setCurrentProject(""); executeScroll()}}> <BiUpArrow className={css.arrowUp}/> </footer>
                 :
                 null
             }
