@@ -2,8 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, useIsPresent } from "framer-motion";
 
-import profileTop from "../Assets/top_half.png"
-import profileBot from "../Assets/bottom_half.png"
+import profileFull from "../Assets/profile-andrew.jpg"
 
 import { GoArrowUpRight } from "react-icons/go";
 
@@ -26,7 +25,7 @@ const Bio = () => {
                 <div className={css.topSection}>
                   <img
                     className={css.pfpTop}
-                    src={profileTop}
+                    src={profileFull}
                     alt="profile-andrew"
                   />
 
@@ -45,14 +44,8 @@ const Bio = () => {
                 </div>
 
                 <div className={css.botSection}>
-                  <img
-                    className={css.pfpBot}
-                    src={profileBot}
-                    alt="profile-andrew"
-                  />
 
                   <p className={css.botIntro} onClick={() => setIntroText("SOY")}> <span className={css.selfText}>{introText}</span> ANDREW</p>
-                  {/* <p className={css.botIntroSig}>ANDREW</p> */}
                 </div>
 
                 <div className={css.bioDescription}>
