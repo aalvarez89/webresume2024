@@ -7,7 +7,7 @@ import hackermanHero from '../Assets/hackerman2.png'
 import filereadHero from '../Assets/Gemini_Generated_Image_ik05i0ik05i0ik05.jpg'
 
 
-const BlogPost = (props) => {
+const Blog = (props) => {
   const posts = [
     {
       title: "How to be a Hackerman",
@@ -72,4 +72,4 @@ const BlogPost = (props) => {
   );
 };
 
-export default BlogPost;
+export default Blog;
