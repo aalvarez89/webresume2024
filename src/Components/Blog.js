@@ -4,8 +4,8 @@ import { IoIosTimer } from "react-icons/io";
 
 import css from '../Styles/Blog.module.scss'
 
-import hackermanHero from '../Assets/hackermanHero.png'
-import filereadHero from '../Assets/fileReadHero.jpg'
+import hackermanHero from '../Assets/blog/hackermanHero.png'
+import filereadHero from '../Assets/blog/filereadHero.jpg'
 
 
 const Blog = (props) => {
