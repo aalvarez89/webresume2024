@@ -1,5 +1,4 @@
 import { useState, useRef } from "react"
-// import { useNavigate } from "react-router-dom";
 
 import { motion, useIsPresent } from "framer-motion"
 
@@ -187,11 +186,7 @@ const Portfolio = () => {
             </Project>
 
         </div>
-
-        {/* <div onClick={() => handleNavigate("")} className="back_button">
-            {" "}
-            &rsaquo;{" "}
-        </div> */}
+        
             <motion.div
                 initial={{ scaleX: 1 }}
                 animate={{ scaleX: 0, transition: { duration: 0.7, ease: "circOut" } }}
@@ -210,7 +205,6 @@ const Project = props => {
     const titleRef = useRef(null)
 
    const executeScroll = () => titleRef ? titleRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' }) : window.scrollTo(0,0)
-//    const executeScrollUp = () => 
 
     return (
         <div className={css.projectWrapper} ref={titleRef}>

@@ -1,32 +1,35 @@
 // import { useRef, useState } from "react";
+import { motion, useIsPresent } from "framer-motion"
 import { IoIosTimer } from "react-icons/io";
 
 import css from '../Styles/Blog.module.scss'
 
-import hackermanHero from '../Assets/hackerman2.png'
-import filereadHero from '../Assets/Gemini_Generated_Image_ik05i0ik05i0ik05.jpg'
+import hackermanHero from '../Assets/hackermanHero.png'
+import filereadHero from '../Assets/fileReadHero.jpg'
 
 
 const Blog = (props) => {
-  const posts = [
-    {
-      title: "How to be a Hackerman",
-      url: "https://dev.to/aalvarez89/how-to-be-a-hackerman-hmj",
-      date: "11/1/2021",
-      readingTime: '6-8',
-      banner: hackermanHero,
-      tags: ["linux", "hack", "terminal"]
-    },
-    {
-      title: "Async Components, FileReader, and Angular",
-      url:
-        "https://dev.to/aalvarez89/async-components-filereader-and-angular-1fdd",
-      date: "12/3/2020",
-      readingTime: '5',
-      banner: filereadHero,
-      tags: ["async", "i/o", "js"]
-    }
-  ];
+    const isPresent = useIsPresent();
+    
+    const posts = [
+        {
+            title: "How to be a Hackerman",
+            url: "https://dev.to/aalvarez89/how-to-be-a-hackerman-hmj",
+            date: "11/1/2021",
+            readingTime: '6-8',
+            banner: hackermanHero,
+            tags: ["linux", "hack", "terminal"]
+        },
+        {
+            title: "Async Components, FileReader, and Angular",
+            url:
+                "https://dev.to/aalvarez89/async-components-filereader-and-angular-1fdd",
+            date: "12/3/2020",
+            readingTime: '5',
+            banner: filereadHero,
+            tags: ["async", "i/o", "js"]
+        }
+    ];
 
   const openInNewTab = (url) => {
     window.open(url, "_blank", "noreferrer");
@@ -67,6 +70,14 @@ const Blog = (props) => {
         ))}
 
       </div>
+
+      <motion.div
+            initial={{ scaleX: 1 }}
+            animate={{ scaleX: 0, transition: { duration: 0.7, ease: "circOut" } }}
+            exit={{ scaleX: 1, transition: { duration: 0.7, ease: "circIn" } }}
+            style={{ originX: isPresent ? 0 : 1 }}
+            className={css.privacyScreen}
+        />
 
     </div>
   );
