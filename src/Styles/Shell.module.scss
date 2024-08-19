@@ -31,7 +31,6 @@
 
     .resume {
         border-radius: 5px;
-
     }
 
     .resume a {
@@ -42,7 +41,6 @@
         justify-content: center;
         text-align: center;
         cursor: pointer;
-
     }
     
     .ctaGrn {
@@ -61,6 +59,12 @@
         background-color: $orn;
         &:hover {
             background-image: linear-gradient(to right, $grn , $red);
+        }
+    }
+    .ctaBlu {
+        background-color: $blu;
+        &:hover {
+            background-image: linear-gradient(to right, $gry , $grn);
         }
     }
 }

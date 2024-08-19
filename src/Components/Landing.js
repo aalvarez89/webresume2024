@@ -35,11 +35,8 @@ const Landing = () => {
 
                     {/* <div className={css.portfolioMenu} onClick={() => handleNavigate("skills")}>
                     + SKILLS
-                    </div>
-
-                    <div className={css.portfolioMenu} onClick={() => handleNavigate("blog")}>
-                    + MISSIVE
                     </div> */}
+
 
                     <div className={css.portfolioMenu} onClick={() => handleNavigate("portfolio")}>
                     + PORTFOLIO
@@ -47,6 +44,10 @@ const Landing = () => {
 
                     <div className={css.portfolioMenu} onClick={() => handleNavigate("social")}>
                     + CONTACT
+                    </div>
+                    
+                    <div className={css.portfolioMenu} onClick={() => handleNavigate("blog")}>
+                    + MISSIVE
                     </div>
                 </div>
 

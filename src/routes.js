@@ -7,7 +7,7 @@ import {    Landing,
             Portfolio,
             Skills,
             Social,
-            Blog
+            BlogPost
         // AdminPage
      } from './Components'
 
@@ -32,7 +32,7 @@ const Routes = [
     <Route key={`route-${RouteConstants.PORTFOLIO}`}    exact path={RouteConstants.PORTFOLIO}       element={<Portfolio />} />,
     <Route key={`route-${RouteConstants.SKILLS}`}       exact path={RouteConstants.SKILLS}          element={<Skills />} />,
     <Route key={`route-${RouteConstants.SOCIAL}`}       exact path={RouteConstants.SOCIAL}          element={<Social />} />,
-    <Route key={`route-${RouteConstants.BLOG}`}         exact path={RouteConstants.BLOG}            element={<Blog />} />,
+    <Route key={`route-${RouteConstants.BLOG}`}         exact path={RouteConstants.BLOG}            element={<BlogPost />} />,
     
     // <Route key={`route-${'private'}`} element={<PrivateRoutes/>}>
     // <Route key={`route-${RouteConstants.ADMIN}`}                exact path={RouteConstants.ADMIN}               element={<AdminPage />} />,

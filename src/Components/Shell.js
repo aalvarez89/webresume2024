@@ -23,6 +23,7 @@ const Shell = () => {
             // case "home": return css.ctaGrn;
             case "portfolio": return css.ctaRed;
             case "social": return css.ctaOrn;
+            case "blog": return css.ctaBlu;
         
             default: return css.ctaGrn;
         }
