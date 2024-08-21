@@ -37,7 +37,211 @@
         color: $grn;
 
         opacity: 0.95;
+
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         
+
+        .wrapper {
+            display: flex;
+            align-items: flex-start;
+            cursor: pointer;
+            margin-bottom: 300px;
+
+            p {
+            //   font-size: 12rem;
+              font-family: 'Londona';
+            //   transform: scale(0.9, 1) rotatey(-10deg) translatey(0px);
+              animation: 3s ebb cubic-bezier(0.45, 0, 0.55, 1) infinite;
+
+              text-shadow: 0 0 $red, 0 0 #fc9e05, 0 0 $blu;
+              transform-origin: 50% 100%;
+              color: $grn;
+              
+              position: relative;
+              transform-style: preserve-3d;
+              margin-right: 4px;
+            //   text-shadow: -3px 0px 0px #198f6b, -7px 0px 0px #1b5252;
+              text-shadow: 0px 0px 0px #198f6b, 0px 0px 0px #1b5252;
+
+              mix-blend-mode: screen;
+
+            //   transform: scale(1.025);
+
+              @for $i from 1 through 7 {
+                &:nth-child(#{$i}) {
+                  animation-delay: 60ms * $i;
+                }
+              }
+            }
+            &:hover p {
+                animation: 2s neutral cubic-bezier(0.45, 0, 0.55, 1) forwards;
+                // animation: 3s ebb linear alternate-reverse;
+                // animation: 3s scaling linear alternate;
+                // text-shadow: -3px -3px 0px #23795f, -5px -5px #1b5252;
+                // text-shadow: 2px 0px 0px #23795f00, 4px 0px #1b525200, 8px 0px #1b525200;
+                // text-shadow: 0 0 $red, 0 0 #fc9e05, 0 0 $blu;
+            }
+          }
+          @keyframes ebb {
+            20% {
+              text-shadow: 4px 0px $blu, 8px 0px $orn, 12px 0px $red; 
+            }
+          }
+          @keyframes neutral {
+            // // 0% {
+            // //   text-shadow: 5px 0px $blu, 10px 0px $orn, 15px 0px $red;
+            // // //   transform:  rotatey(-10deg);
+            // // }
+            // 20% {
+            //     transform: scale(1.025)
+            // }
+            // 20% {
+            //   text-shadow: 0px 0px $red, 0px 0px #fc9e05, 0px 0px $blu;
+            // //   transform:  rotatey(-10deg);
+            // }
+            // 40% {
+            // //   transform:  translatey(16px);
+            //   text-shadow: -5px 0px $red, -10px 0px #fc9e05, -15px 0px $blu;
+            // }
+            // 60% {
+            // //   transform:  rotatey(-5deg);
+            //   text-shadow: 0px 0px $red, 0px 0px #fc9e05, 0px 0px $blu;
+            // }
+            // 80% {
+            // //   transform:  translatey(16px);
+            //   text-shadow: 5px 0px $red, 10px 0px #fc9e05, 15px 0px $blu;
+            // }
+            0% {
+                text-shadow: 4px 0 #23795f, 8px 0 #1b5252, 10px 0 #1b5252;
+                // text-shadow: 4px 0 $red, 8px 0 #fc9e05, 12px 0 $blu;#23795f00, 4px 0px #1b525200, 8px 0px #1b525200;
+                // color: #18e0a400;
+            }
+            80% {
+                text-shadow: 0px 0 #23795f, 0px 0 #1b5252, 0px 0 #1b5252;
+                // text-shadow: 4px 0 $red, 8px 0 #fc9e05, 12px 0 $blu;#23795f00, 4px 0px #1b525200, 8px 0px #1b525200;
+                // color: #18e0a400;
+            }
+            // 80% {text-shadow: 0 0 $red, 0 0 #fc9e05, 0 0 $blu;
+            //     ;}
+            // 99% {
+            //     color: white;
+            // }
+          }
+          @keyframes flow {
+            // 0% {
+            //   text-shadow: 5px 0px $blu, 10px 0px $orn, 15px 0px $red;
+            // //   transform:  rotatey(-10deg);
+            // }
+            // 20% {
+            // }
+            20% {
+                // transform: scale(1.025);
+              text-shadow: 0px 0px $red, 0px 0px #fc9e05, 0px 0px $blu;
+            //   transform:  rotatey(-10deg);
+            }
+            40% {
+            //   transform:  translatey(16px);
+              text-shadow: -5px 0px $red, -10px 0px #fc9e05, -15px 0px $blu;
+            }
+            60% {
+            //   transform:  rotatey(-5deg);
+              text-shadow: 0px 0px $red, 0px 0px #fc9e05, 0px 0px $blu;
+            }
+            80% {
+            //   transform:  translatey(16px);
+              text-shadow: 5px 0px $red, 10px 0px #fc9e05, 15px 0px $blu;
+            }
+          }
+        //   @keyframes jump {
+        //     20% {
+        //       transform: translatey(0) scale(0);
+        //       opacity: 0;
+        //     }
+        //     40% {
+        //       transform: translatey(-50px) scale(1);
+        //       opacity: 1;
+        //     }
+        //     60% {
+        //       transform: translatey(0) scale(0);
+        //       opacity: 0;
+        //     }
+        //     80% {
+        //       transform: translatey(-50px) scale(1);
+        //       opacity: 1;
+        //     }
+        //   }
+
+        .content {
+            width: 600px;
+            height: 300px;
+            font-family: 'Londona';
+
+            position: relative;
+
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 100%;
+            // justify-content: center;
+            // align-items: center;
+
+        }
+        .content h2 {
+            // color: #fff;
+            font-size: 8em;
+            position: relative;
+            grid-area: 1 / 1 / 2 / 2;
+            // transform: translate(-50%, -50%);
+            // top: 220px;
+            // left: 200px;
+        }
+        .content h2:nth-child(1) {
+            z-index: 1;
+            color: transparent;
+            -webkit-text-stroke: 2px $grn;
+        }
+        
+        .content h2:nth-child(2) {
+            z-index: 2;
+            color: $red;
+            animation: animate 4s ease-in-out infinite;
+        }
+        
+        @keyframes animate {
+            0%,
+            100% {
+                clip-path: polygon(
+                    0% 45%,
+                    16% 44%,
+                    33% 50%,
+                    54% 60%,
+                    70% 61%,
+                    84% 59%,
+                    100% 52%,
+                    100% 100%,
+                    0% 100%
+                );
+                color: $orn;
+            }
+        
+            50% {
+                clip-path: polygon(
+                    0% 60%,
+                    15% 65%,
+                    34% 66%,
+                    51% 62%,
+                    67% 50%,
+                    84% 45%,
+                    100% 46%,
+                    100% 100%,
+                    0% 100%
+                );
+                color: $red;
+            }
+        }
         
         .title {
             text-decoration: none;
@@ -67,6 +271,12 @@
 }
 @media only screen and (min-width: 1024px) {
     /* CSS rules for desktops go here */
+    .menuContainer {
+        .wrapper {
+            p {
+            //   font-size: 12rem;
+              font-size: 16vw;
+            }}}
     .title {
         font-size: 8rem;
     }
@@ -78,6 +288,12 @@
 
 @media only screen and (max-width: 767px) {
     /* CSS rules for mobile phones go here */
+
+    .menuContainer {
+        .wrapper {
+            p {
+              font-size: 20vw;
+            }}}
     .menuContainer {
         display: flex;
         flex-direction: column;

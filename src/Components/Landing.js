@@ -24,9 +24,22 @@ const Landing = () => {
             
             <div className={css.menuContainer}>
 
-                <div className={css.title}>
+                {/* <div className={css.title}>
                     KWEIZAR
+                </div> */}
+                <div className={css.wrapper}>
+                    <p>k</p>
+                    <p>w</p>
+                    <p>e</p>
+                    <p>i</p>
+                    <p>z</p>
+                    <p>a</p>
+                    <p>r</p>
                 </div>
+                {/* <div className={css.content}>
+                    <h2>KWEIZAR</h2>
+                    <h2>KWEIZAR</h2>
+                </div> */}
 
                 <div className={css.menu}>
                     <div className={css.portfolioMenu} onClick={() => handleNavigate("bio")}>
