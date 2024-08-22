@@ -21,12 +21,36 @@
         align-items: center;
 
         .brackets {
-            color: $orn;
+            color: $red;
             font-size: 28px;
+            animation: 7s colorRotate cubic-bezier(0.45, 0, 0.55, 1) infinite;
         }
+        .neutral {
+            animation: none;
+        }
+        @keyframes colorRotate {
+            25% {
+              color: $grn; 
+            }
+            50% {
+                color: $orn;
+            }
+            75% {
+                color: $blu;
+            }
+            100% {
+                color: $red;
+            }
+          }
         &:hover .brackets {
             color: $red;
+            animation: none;
         }
+    }
+
+    .openTitle {
+        color: $red;
+        animation: none;
     }
 
     .resume {

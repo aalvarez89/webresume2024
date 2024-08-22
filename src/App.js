@@ -3,13 +3,11 @@ import { AnimatedRoutes } from './AnimatedRoutes';
 
 import css from './Styles/App.module.scss';
 import { Layout, Shell } from './Components';
-
-// import "./styles.css";
-
+import { GlobalSiteContext, useGlobalSiteState } from './Store/GlobalSiteContext';
 export default function App() {
 
   return (
-    // <GlobalUserContext.Provider value={useGlobalUserState()}>
+    <GlobalSiteContext.Provider value={useGlobalSiteState()}>
       <div className={css.app}>
         <Router>
           <Shell />
@@ -18,6 +16,6 @@ export default function App() {
           </Layout>
         </Router>
       </div>
-    // </GlobalUserContext.Provider>
+    </GlobalSiteContext.Provider>
   )
 }

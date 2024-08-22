@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion, useIsPresent } from "framer-motion";
-
+import { GlobalSiteContext, siteActionTypes } from "../Store/GlobalSiteContext";
 import heroVideo from "../Assets/heroLanding2.mp4"
 
 import css from '../Styles/Landing.module.scss'
@@ -9,6 +9,7 @@ import css from '../Styles/Landing.module.scss'
 const Landing = () => {
 
 
+    const { globalSiteState, globalSiteDispatch } = useContext(GlobalSiteContext);
     const isPresent = useIsPresent();
 
     const navigate = useNavigate();
@@ -17,7 +18,6 @@ const Landing = () => {
         navigate(`/${page}`)
     }
 
-    const [isMenuOpen, setIsMenuOpen] = useState(true);
     
     return (
         <div className={css.landing}>
@@ -29,9 +29,11 @@ const Landing = () => {
                 <div className={css.menuContainer}>
                     <AnimatePresence mode="wait">
 
-                        {isMenuOpen &&
+                        {globalSiteState.openTitle &&
                             <motion.div className={css.wrapper}
-                                    onClick={() => setIsMenuOpen(false)}
+                                    onClick={() => 
+                                        globalSiteDispatch({ type: siteActionTypes.SET_OPENTITLE, payload: false})
+                                    }
                                     
                                     initial={{
                                         opacity: 0,
@@ -64,7 +66,7 @@ const Landing = () => {
                     </AnimatePresence>  
                         
                     {
-                        !isMenuOpen && 
+                        !globalSiteState.openTitle && 
                             <motion.div className={css.menu} 
                                 initial={{
                                     opacity: 0,
