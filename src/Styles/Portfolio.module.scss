@@ -103,15 +103,14 @@
     }
 
     .videoPga {
-        object-fit:none;
-        filter: blur(2px) hue-rotate(250deg);
+        object-fit: cover;
     }
     .videoEon {
-        object-fit: fill;
+        object-fit: cover;
         filter: brightness(.6) ;
     }
     .videoNuv {
-        object-fit: fill;
+        object-fit: cover;
         filter: brightness(.8) ;
     }
     .videoCot {

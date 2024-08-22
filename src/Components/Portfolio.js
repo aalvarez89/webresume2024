@@ -2,10 +2,10 @@ import { useState, useRef } from "react"
 
 import { motion, useIsPresent } from "framer-motion"
 
-import pegasusHero from "../Assets/pegasusHero2.mp4"
-import nuvoolaHero from "../Assets/nuvoolaHero2.mp4"
-import coteacherHero from "../Assets/coteacherHero.mp4"
-import eonHero from "../Assets/eonHero2.mp4"
+import pegasusHero from "../Assets/pegasusHeroFinallow.mp4"
+import nuvoolaHero from "../Assets/nuvoolaHeroFinallow.mp4"
+import coteacherHero from "../Assets/coteacherHeroFinallow.mp4"
+import eonHero from "../Assets/eonHeroFinal.mp4"
 import crankyHero from "../Assets/crankyHero2.mp4"
 import ludumHero from "../Assets/ludumHero.gif"
 
