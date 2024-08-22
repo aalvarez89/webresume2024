@@ -23,7 +23,7 @@
         .brackets {
             color: $red;
             font-size: 28px;
-            animation: 7s colorRotate cubic-bezier(0.45, 0, 0.55, 1) infinite;
+            animation: 11s colorRotate cubic-bezier(0.45, 0, 0.55, 1) infinite;
         }
         .neutral {
             animation: none;
@@ -33,10 +33,10 @@
               color: $grn; 
             }
             50% {
-                color: $orn;
+                color: $blu;
             }
             75% {
-                color: $blu;
+                color: $orn;
             }
             100% {
                 color: $red;
