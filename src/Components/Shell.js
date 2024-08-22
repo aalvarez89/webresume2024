@@ -28,7 +28,6 @@ const Shell = () => {
     const getCtaStyle = tab => {
 
         switch (tab) {
-            // case 'home': return css.ctaGrn;
             case 'portfolio': return css.ctaRed;
             case 'social': return css.ctaOrn;
             case 'blog': return css.ctaBlu;
@@ -45,8 +44,6 @@ const Shell = () => {
     return (
         <>
             <div className={css.shell} >
-            {/* // onClick={() => console.log(currentTab)}> */}
-
                 <div className={`${css.main} ${ !globalSiteState.openTitle ? css.openTitle : ''}`} onClick={() => handleNavigate('', currentTab) }><span className={`${css.brackets} ${ !globalSiteState.openTitle ? css.neutral : ''}`}>&#123;</span>&nbsp; I'M ANDREW &nbsp;<span className={`${css.brackets} ${ !globalSiteState.openTitle ? css.neutral : ''}`}>&#125;</span></div>
                 <div className={`${css.resume} ${getCtaStyle(currentTab)}`}>
                     <Link to={resumePdf} target='_blank' download>RESUME</Link>
