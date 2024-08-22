@@ -23,22 +23,22 @@
         .brackets {
             color: $red;
             font-size: 28px;
-            animation: 11s colorRotate cubic-bezier(0.45, 0, 0.55, 1) infinite;
+            animation: 11s colorRotate linear infinite;
         }
         .neutral {
             animation: none;
         }
         @keyframes colorRotate {
-            25% {
+            10% {
               color: $grn; 
             }
-            50% {
+            35% {
                 color: $blu;
             }
-            75% {
+            60% {
                 color: $orn;
             }
-            100% {
+            85% {
                 color: $red;
             }
           }
@@ -49,8 +49,8 @@
     }
 
     .openTitle {
-        color: $red;
-        animation: none;
+        // color: $red;
+        // animation: none;
     }
 
     .resume {
