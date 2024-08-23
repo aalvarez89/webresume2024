@@ -1,3 +1,16 @@
+@import './App.module.scss';
+
 .skills {
+    width: 100%;
     display: flex;
+    justify-content: center;
+
+    .layer {
+        font-size: 2rem;
+        color: $gry;
+    }
+
+    li {
+        list-style-type: none;
+    }
 }

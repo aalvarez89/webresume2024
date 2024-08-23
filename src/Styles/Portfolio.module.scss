@@ -48,11 +48,12 @@
 
         .title {
             padding-left: 20px;
+            font-family: 'Londona';
+            
             &:hover {
                 color: $red;
                 cursor: pointer;
             }
-            font-family: 'Londona';
         }
 
         .jobInfo {
