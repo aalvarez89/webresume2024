@@ -8,7 +8,6 @@ import css from '../Styles/Landing.module.scss'
 
 const Landing = () => {
 
-
     const { globalSiteState, globalSiteDispatch } = useContext(GlobalSiteContext);
     const isPresent = useIsPresent();
 
@@ -80,18 +79,18 @@ const Landing = () => {
                                     duration: 1,
                                     times: [0, 0.5, 1]
                                 }}>
+
                                 <div className={css.portfolioMenu} onClick={() => handleNavigate("bio")}>
                                 HELLO
+                                </div>
+
+                                <div className={css.portfolioMenu} onClick={() => handleNavigate("portfolio")}>
+                                PORTFOLIO
                                 </div>
 
                                 {/* <div className={css.portfolioMenu} onClick={() => handleNavigate("skills")}>
                                 SKILLS
                                 </div> */}
-
-
-                                <div className={css.portfolioMenu} onClick={() => handleNavigate("portfolio")}>
-                                PORTFOLIO
-                                </div>
 
                                 <div className={css.portfolioMenu} onClick={() => handleNavigate("social")}>
                                 CONTACT

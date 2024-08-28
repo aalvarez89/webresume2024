@@ -1,10 +1,25 @@
-import { useState, useEffect, useContext } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import { GlobalSiteContext, siteActionTypes } from '../Store/GlobalSiteContext';
+import { useState, useEffect, useContext, useRef } from 'react';
+
+import { useNavigate, useLocation, Link } from 'react-router-dom';
+
+import { motion } from 'framer-motion';
+
+import { RxHamburgerMenu } from 'react-icons/rx';
+import css from '../Styles/Shell.module.scss'
 
 import resumePdf from '../Assets/AndrewResume2024_ln.pdf'
-import css from '../Styles/Shell.module.scss'
+
+
+const itemVariants = {
+    open: {
+      opacity: 1,
+      y: 0,
+      transition: { type: 'spring', stiffness: 300, damping: 24 }
+    },
+    closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+};
+
 
 const Shell = () => {
     const { globalSiteState, globalSiteDispatch } = useContext(GlobalSiteContext);
@@ -15,14 +30,19 @@ const Shell = () => {
 
     const [ currentTab, setCurrentTab ] = useState('home');
 
+    const [isOpen, setIsOpen] = useState(false);
+
+
     const handleNavigate = (page, currentTab) => {
         if (currentTab === 'home') {
 
             globalSiteDispatch({ type: siteActionTypes.SET_OPENTITLE, payload: !globalSiteState.openTitle})
+
             } else {
                 globalSiteDispatch({ type: siteActionTypes.SET_OPENTITLE, payload: false})
                 navigate(`/${page}`)
         }
+        setIsOpen(false)
     }
 
     const getCtaStyle = tab => {
@@ -40,11 +60,84 @@ const Shell = () => {
         setCurrentTab(pathname.slice(1) || 'home')
         
     }, [pathname, location])
+
+
+    const dropdownRef = useRef();
+    useEffect(() => {
+        const handler = e => {
+            if (!dropdownRef.current.contains(e.target)) {
+                setIsOpen(false)
+            }
+        }
+        document.addEventListener('mousedown', handler)
+        return () => document.removeEventListener('mousedown', handler)
+    }, [])
     
     return (
         <>
             <div className={css.shell} >
-                <div className={`${css.main} ${ !globalSiteState.openTitle ? css.openTitle : ''}`} onClick={() => handleNavigate('', currentTab) }><span className={`${css.brackets} ${ !globalSiteState.openTitle ? css.neutral : ''}`}>&#123;</span>&nbsp; I'M ANDREW &nbsp;<span className={`${css.brackets} ${ !globalSiteState.openTitle ? css.neutral : ''}`}>&#125;</span></div>
+                <div className={css.controlWrapper}>
+                    <motion.nav
+                        initial={false}
+                        animate={isOpen ? 'open' : 'closed'}
+                        className={css.menu}
+                        >
+                        <motion.button
+                            whileTap={{ scale: 0.97 }}
+                            onClick={() => setIsOpen(!isOpen)}
+                        >
+                            <RxHamburgerMenu color={isOpen ? css.red : css.grn} size={20}/>
+                            {/* <motion.div
+                            variants={{
+                                open: { rotate: 180 },
+                                closed: { rotate: 0 }
+                            }}
+                            transition={{ duration: 0.2 }}
+                            style={{ originY: 0.55 }}
+                            >
+                            <svg width='15' height='15' viewBox='0 0 20 20'>
+                                <path d='M0 7 L 20 7 L 10 16' />
+                            </svg>
+                            </motion.div> */}
+                        </motion.button>
+                        <motion.ul
+                            variants={{
+                            open: {
+                                clipPath: 'inset(0% 0% 0% 0% round 10px)',
+                                transition: {
+                                type: 'spring',
+                                bounce: 0,
+                                duration: 0.7,
+                                delayChildren: 0.3,
+                                staggerChildren: 0.05
+                                }
+                            },
+                            closed: {
+                                clipPath: 'inset(10% 50% 90% 50% round 10px)',
+                                transition: {
+                                type: 'spring',
+                                bounce: 0,
+                                duration: 0.3
+                                }
+                            }
+                            }}
+                            style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
+                            ref={dropdownRef}
+                        >
+                            <motion.li variants={itemVariants} onClick={() => handleNavigate('bio')}>Hello</motion.li>
+                            <motion.li variants={itemVariants} onClick={() => handleNavigate('portfolio')}>Portfolio</motion.li>
+                            {/* <motion.li variants={itemVariants} onClick={() => handleNavigate('skills')}>Skills</motion.li> */}
+                            <motion.li variants={itemVariants} onClick={() => handleNavigate('social')}>Contact</motion.li>
+                            <motion.li variants={itemVariants} onClick={() => handleNavigate('blog')}>Missive</motion.li>
+                        </motion.ul>
+                    </motion.nav>
+                
+                    <div className={`${css.main} ${ !globalSiteState.openTitle ? css.openTitle : ''}`} onClick={() => handleNavigate('', currentTab) }><span className={`${css.brackets} ${ !globalSiteState.openTitle ? css.neutral : ''}`}>&#123;</span>&nbsp; I'M ANDREW &nbsp;<span className={`${css.brackets} ${ !globalSiteState.openTitle ? css.neutral : ''}`}>&#125;</span></div>
+                </div>
+
+                
+                
+                
                 <div className={`${css.resume} ${getCtaStyle(currentTab)}`}>
                     <Link to={resumePdf} target='_blank' download>RESUME</Link>
                 </div>

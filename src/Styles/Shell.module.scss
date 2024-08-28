@@ -14,11 +14,69 @@
     z-index: 666;
     padding: 0px 20px;
 
+
+    .controlWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu {
+        width: 300px;
+        width: 20px;
+        height: 40px;
+        position: relative;
+
+        button {
+            background: $blk;
+            border: none;
+            border-radius: 10px;
+
+            padding: 10px 0px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 10px;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: $blk;
+            width: 100px;
+          }
+          
+          li {
+            color: $grn;
+            text-align: left;
+            display: block;
+
+            &:hover {
+                color: $ylw;
+                cursor: pointer;
+            }
+          }
+          
+          ul,
+          li {
+            list-style: none;
+            margin: 0;
+            padding: 10px;
+          }
+    }
+
+
     .main {
         font-size: 20px;
         cursor: pointer;
         display: flex;
         align-items: center;
+        margin-left: 10px;
 
         .brackets {
             color: $red;
