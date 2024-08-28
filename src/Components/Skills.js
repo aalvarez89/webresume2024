@@ -209,21 +209,21 @@ const Skills = () => {
     )
 }
 
-const Skill = props => {
+// const Skill = props => {
 
-  const {title, tags, skillCss } = props;
+//   const {title, tags, skillCss } = props;
 
-  // const titleRef = useRef(null)
+//   const titleRef = useRef(null)
 
 
-  return (
+//   return (
       
-      <div className={`${css.skillWrapper} ${skillCss}`} title={`${tags.map(t => `#${t} `)}`}> 
-        <div>{title}</div>
+//       <div className={`${css.skillWrapper} ${skillCss}`} title={`${tags.map(t => `#${t} `)}`}> 
+//         <div>{title}</div>
           
-      </div>
-  )
-}
+//       </div>
+//   )
+// }
 
 export default Skills;
 
