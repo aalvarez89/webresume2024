@@ -31,11 +31,11 @@ const Blog = (props) => {
             tags: ['linux', 'hack', 'terminal']
         },
         {
-            title: 'What happened to Front-end developers?',
+            title: 'What happened to Front-end positions?',
             url:
                 'https://dev.to/aalvarez89/an-open-discussion-what-happened-to-front-end-developers-3ol6',
             date: '28/8/2024',
-            readingTime: '1',
+            readingTime: '2',
             banner: frontendHero,
             tags: ['frontend', 'jobs', 'web dev']
         }

@@ -81,6 +81,7 @@ const Shell = () => {
                         initial={false}
                         animate={isOpen ? 'open' : 'closed'}
                         className={css.menu}
+                        ref={dropdownRef}
                         >
                         <motion.button
                             whileTap={{ scale: 0.97 }}
@@ -122,7 +123,6 @@ const Shell = () => {
                             }
                             }}
                             style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
-                            ref={dropdownRef}
                         >
                             <motion.li variants={itemVariants} onClick={() => handleNavigate('bio')}>Hello</motion.li>
                             <motion.li variants={itemVariants} onClick={() => handleNavigate('portfolio')}>Portfolio</motion.li>
