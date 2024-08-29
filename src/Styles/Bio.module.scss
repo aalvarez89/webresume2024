@@ -25,7 +25,23 @@
     .topSection {
         .pfpTop {
             border-radius: 50%;
+            filter: brightness(1.2);
+            border-width: 12px;
+            border-style:solid;
+            border-color: $orn;
+            animation: 30s colorRotate linear infinite;
+            box-sizing: border-box;
         }
+        @keyframes colorRotate {
+            0% {border-color: $orn;}
+            30% {border-color: $orn;}
+            33% {border-color: $red;}
+            63% {border-color: $red;}
+            66% {border-color: $blu;}
+            96% {border-color: $blu;}
+            100% {border-color: $orn;}
+          }
+
         .topIntro {
             font-weight: 700;
             color: $grn;
