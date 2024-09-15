@@ -7,7 +7,8 @@ import {    Landing,
             Portfolio,
             Skills,
             Social,
-            Blog
+            Blog,
+            Error404
         // AdminPage
      } from './Components'
 
@@ -22,6 +23,8 @@ const RouteConstants = {
     BLOG: '/blog',
     SOCIAL: '/social',
 
+    ERROR: '/404',
+
     ADMIN: '/admin'
 }
 
@@ -34,6 +37,8 @@ const Routes = [
     <Route key={`route-${RouteConstants.SOCIAL}`}       exact path={RouteConstants.SOCIAL}          element={<Social />} />,
     <Route key={`route-${RouteConstants.BLOG}`}         exact path={RouteConstants.BLOG}            element={<Blog />} />,
     
+    <Route key={`route-${RouteConstants.ERROR}`}        path={'*'}                                  element={<Error404 />} />
+
     // <Route key={`route-${'private'}`} element={<PrivateRoutes/>}>
     // <Route key={`route-${RouteConstants.ADMIN}`}                exact path={RouteConstants.ADMIN}               element={<AdminPage />} />,
     // </Route>,

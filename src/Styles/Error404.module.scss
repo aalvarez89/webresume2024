@@ -1,0 +1,117 @@
+@import './App.module.scss';
+
+.error404 {
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: $blk;
+    color: $whi;
+    
+}
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    pointer-events: none;
+    padding-top: 180px;
+
+    p {
+      font-family: 'Londona';
+      animation: 3s ebb cubic-bezier(0.45, 0, 0.55, 1) infinite;
+
+      text-shadow: 0 0 $red, 0 0 #fc9e05, 0 0 $blu;
+      transform-origin: 50% 100%;
+      color: $grn;
+      
+      position: relative;
+      transform-style: preserve-3d;
+      margin-right: 4px;
+      text-shadow: 0px 0px 0px #198f6b, 0px 0px 0px #1b5252;
+
+      mix-blend-mode: screen;
+
+      @for $i from 1 through 7 {
+        &:nth-child(#{$i}) {
+          animation-delay: 60ms * $i;
+        }
+      }
+    }
+  }
+  @keyframes ebb {
+    20% {
+      text-shadow: 4px 0px $blu, 8px 0px $orn, 12px 0px $red; 
+    }
+  }
+  @keyframes neutral {
+    0% {
+        text-shadow: 4px 0 #23795f, 8px 0 #1b5252, 10px 0 #1b5252;
+    }
+    80% {
+        text-shadow: 0px 0 #23795f, 0px 0 #1b5252, 0px 0 #1b5252;
+    }
+}
+
+.message {
+    font-size: 2rem;
+}
+
+.homeCTA {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    
+
+    & p {
+        font-size: 3rem;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        
+        padding-bottom: 10px;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .spacer {
+            margin-left: -5px;
+        }
+    }
+
+    &:hover {
+        
+        color: $grn;
+    }
+}
+.spacer {
+    margin-left: -5px;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    /* CSS rules for desktops go here */
+    .wrapper {
+        p {
+            font-size: 16vw;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile phones go here */
+
+    .wrapper {
+        p {
+            font-size: 10rem;
+        }
+    }
+}
