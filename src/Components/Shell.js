@@ -22,17 +22,17 @@ const itemVariants = {
 
 
 const Shell = () => {
+
     const { globalSiteState, globalSiteDispatch } = useContext(GlobalSiteContext);
 
-    const navigate = useNavigate();
     const location = useLocation();
     const { pathname } = location;
-
-    const [ currentTab, setCurrentTab ] = useState('home');
-
+    
+    const [currentTab, setCurrentTab] = useState('home');
     const [isOpen, setIsOpen] = useState(false);
-
-
+    
+    
+    const navigate = useNavigate();
     const handleNavigate = (page, currentTab) => {
         if (currentTab === 'home') {
 
@@ -94,18 +94,6 @@ const Shell = () => {
                             onClick={() => setIsOpen(!isOpen)}
                         >
                             <RxHamburgerMenu color={isOpen ? css.red : css.grn} size={20}/>
-                            {/* <motion.div
-                            variants={{
-                                open: { rotate: 180 },
-                                closed: { rotate: 0 }
-                            }}
-                            transition={{ duration: 0.2 }}
-                            style={{ originY: 0.55 }}
-                            >
-                            <svg width='15' height='15' viewBox='0 0 20 20'>
-                                <path d='M0 7 L 20 7 L 10 16' />
-                            </svg>
-                            </motion.div> */}
                         </motion.button>
                         <motion.ul
                             variants={{

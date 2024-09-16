@@ -12,11 +12,9 @@ const Landing = () => {
     const isPresent = useIsPresent();
 
     const navigate = useNavigate();
-
     const handleNavigate = page => {
         navigate(`/${page}`)
     }
-
     
     return (
         <div className={css.landing}>

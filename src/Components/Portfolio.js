@@ -15,6 +15,7 @@ import { BiUpArrow } from "react-icons/bi"
 
 
 const Portfolio = () => {
+
     const isPresent = useIsPresent();
 
     const [currentProject, setCurrentProject] = useState("")
@@ -112,7 +113,7 @@ const Portfolio = () => {
         // description: "",
         // achievements: [""]
         // }
-]
+    ]
     
     return (
         <div className={css.portfolio}>
