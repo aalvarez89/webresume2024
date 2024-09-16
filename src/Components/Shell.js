@@ -72,6 +72,12 @@ const Shell = () => {
         document.addEventListener('mousedown', handler)
         return () => document.removeEventListener('mousedown', handler)
     }, [])
+
+    useEffect(() => {
+        if (currentTab !== 'home') {
+            globalSiteDispatch({ type: siteActionTypes.SET_OPENTITLE, payload: false})
+        }
+    }, [currentTab, globalSiteDispatch])
     
     return (
         <>
