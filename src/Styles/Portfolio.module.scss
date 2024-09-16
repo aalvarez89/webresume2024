@@ -83,8 +83,25 @@
                   }
             }
         }
+        .description {
+            font-weight: 100;
+            padding: 0px 20px;
+            margin-top: 20px;
+        }
+        .toggleAchievements {
+            font-size: 0.8rem;
+            cursor: pointer;
+            text-align: right;
+            padding-top: 20px;
+            color: $gry;
+            padding-right: 20px;
+        }
+        &:hover {
+            .toggleAchievements {
 
-        
+                color: $red;
+            }
+        }
     }
     .expanded {
         height: min-content;
