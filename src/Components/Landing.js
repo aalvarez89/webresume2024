@@ -52,13 +52,13 @@ const Landing = () => {
                                         type: 'spring',
                                     }}
                                     >
-                                <p>k</p>
+                                <p></p>
                                 <p>w</p>
                                 <p>e</p>
                                 <p>i</p>
                                 <p>z</p>
                                 <p>a</p>
-                                <p>r</p>
+                                <p></p>
                         </motion.div>}
                     </AnimatePresence>  
                         
