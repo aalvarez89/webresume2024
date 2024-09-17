@@ -211,7 +211,8 @@
     .menuContainer {
         .wrapper {
             p {
-              font-size: 20vw;
+            //   font-size: 18vw;
+              font-size: 5rem;
             }}}
     .menuContainer {
         display: flex;
@@ -220,7 +221,7 @@
         justify-content: center;
     }
     .title {
-        font-size: 4.2rem;
+        font-size: 4.5rem;
     }
 
     .portfolioMenu {
