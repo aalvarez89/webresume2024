@@ -79,7 +79,11 @@ const Social = () => {
                     <div className={css.copyright}>
                         ©2024 BY ANDREW ALVAREZ.
                     </div>
+                    <div className={css.update}>
+                        Resume Version [SC] - Last Updated <span className={css.accent}>9/17/2024</span>
+                    </div>
                 </div>
+
             </div>
             <motion.div
                 initial={{ scaleX: 1 }}
