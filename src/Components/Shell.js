@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import css from '../Styles/Shell.module.scss'
 
-import resumePdf from '../Assets/AndrewResume2024_ln.pdf'
+import resumePdf from '../Assets/AndrewResume2024_sc.pdf'
 
 
 const itemVariants = {

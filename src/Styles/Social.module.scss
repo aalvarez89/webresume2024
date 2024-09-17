@@ -70,6 +70,16 @@
             text-align: center;
             color: $orn;
         }
+
+        .update {
+            padding-top: 20px;
+            width: 100%;
+            text-align: center;
+
+            .accent {
+                color: $orn;
+            }
+        }
     }
 
     .privacyScreen {
