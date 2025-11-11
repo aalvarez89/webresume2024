@@ -27,6 +27,7 @@ const Landing = () => {
                     <AnimatePresence mode="wait">
 
                         {globalSiteState.openTitle &&
+                        <>
                             <motion.div className={css.wrapper}
                                     onClick={() => 
                                         globalSiteDispatch({ type: siteActionTypes.SET_OPENTITLE, payload: false})
@@ -52,14 +53,43 @@ const Landing = () => {
                                         type: 'spring',
                                     }}
                                     >
-                                <p></p>
+                                <p>K</p>
                                 <p>w</p>
                                 <p>e</p>
                                 <p>i</p>
                                 <p>z</p>
                                 <p>a</p>
-                                <p></p>
-                        </motion.div>}
+                                <p>r</p>
+                            </motion.div>
+                        <motion.div className={css.subtitle}
+                                    onClick={() => 
+                                        globalSiteDispatch({ type: siteActionTypes.SET_OPENTITLE, payload: false})
+                                    }
+                                    
+                                    initial={{
+                                        opacity: 0,
+                                        translateY: '-100px',
+                                        scale: 0,
+                                    }}
+                                    animate={{
+                                        opacity: 1,
+                                        translateY: '0px',
+                                        scale: 1,
+                                    }}
+                                    exit={{
+                                        opacity: 0,
+                                        scale: 0,
+                                    }}
+
+                                    transition={{
+                                        duration: 0.7,
+                                        type: 'spring',
+                                    }}
+                                    >
+                                <div>MEDIA STUDIO</div>
+                            </motion.div>
+                        </>
+                        }
                     </AnimatePresence>  
                         
                     {

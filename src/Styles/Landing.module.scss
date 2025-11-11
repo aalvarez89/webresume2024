@@ -59,7 +59,6 @@
             display: flex;
             align-items: flex-start;
             cursor: pointer;
-            padding-bottom: 180px;
 
             p {
               font-family: 'Londona';
@@ -99,7 +98,25 @@
                 text-shadow: 0px 0 #23795f, 0px 0 #1b5252, 0px 0 #1b5252;
             }
           }
-          
+        
+        .subtitle {
+            padding-bottom: 180px;
+            animation: 30s colorRotate linear infinite;
+            border-top: 2px solid;
+            padding-top: 12px;
+            width: 50%;
+            font-weight: 300;
+        }
+        @keyframes colorRotate {
+            0% {color: $grn;}
+            30% {color: $grn;}
+            33% {color: $red;}
+            63% {color: $red;}
+            66% {color: $orn;}
+            96% {color: $orn;}
+            100% {color: $grn;}
+        }
+        
 
         .content {
             width: 600px;
@@ -195,7 +212,11 @@
             p {
             //   font-size: 16vw;
               font-size: 14rem;
-            }}}
+            }}
+        }
+        .subtitle {
+            font-size: 2.5rem;
+        }
     .title {
         font-size: 8rem;
     }
@@ -213,7 +234,12 @@
             p {
             //   font-size: 18vw;
               font-size: 5rem;
-            }}}
+            }}
+        .subtitle {
+            border-top: 1px solid;
+            font-size: 1.5rem;
+        }
+        }
     .menuContainer {
         display: flex;
         flex-direction: column;
