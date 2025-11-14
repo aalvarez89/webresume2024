@@ -1,242 +1,166 @@
-import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-import css from '../Styles/Skills.module.scss'
+import css from "../Styles/Skills.module.scss"
 
 const Skills = () => {
 
-    // const navigate = useNavigate();
+  const [skillsFilter, setSkillsFilter] = useState("")
 
-    const [showCore, setShowCore] = useState(false);
-    // const [showFullStack, setShowFullStack] = useState(false);
-    const [showFrontend, setShowFrontend] = useState(false);
-    
+  const handleFilter = active => {
+    setSkillsFilter(active === skillsFilter ? "" : active)
+  }
+  return (
+    <div className={css.skills}>
 
-    // const handleNavigate = page => {
-    //     navigate(`/${page}`)
-    // }
-    
-    return (
-        <div className={css.skills}>
-
-
-          <div className={css.layer} onClick={() => setShowCore(!showCore)}>
-            Core Technologies
-          </div>
-          <div className={css.layer} onClick={() => setShowFrontend(!showFrontend)}>
-            Frontend Technologies
-          </div>
-
-          {/* <div>
-            Fullstack Developer
-          </div> */}
-            {
-              showCore ? 
-            
-            <div className={css.skillContainer}>
-
-              <div className={css.listTitle}>languages</div>
-              <ul className={css.skillList}>
-                <li>JS | Node</li>
-                <li>TypeScript</li>
-                <li>solidity</li>
-                <li>c++</li>
-                <li>sql</li>
-                
-              </ul>
-
-              <div className={css.listTitle}>OS</div>
-              <ul className={css.skillList}>
-                <li>windows</li>
-                  <li>wsl</li>
-                <li>unix</li>
-                <li>terminal</li>
-                  <li>bash</li>
-                  <li>powershell</li>
-                
-                
-              </ul>
-              <div className={css.listTitle}>Operations</div>
-              <ul className={css.skillList}>
-                <li>git / github</li>
-                
-                
-              </ul>
-
-              <div className={css.listTitle}>frontend</div>
-              <div className={css.listTitle}>technologies</div>
-              <ul className={css.skillList}>
-                <li>html</li>
-                  <li>svg</li>
-                  <li>accessibility</li>
-                <li>css</li>
-                  <li>css grid</li>
-                  <li>flexbox</li>
-                  <li>media queries/responsive UI</li>
-                
-                
-              </ul>
-              <div className={css.listTitle}>libraries</div>
-              <ul className={css.skillList}>
-                <li>react</li>
-                  <li>redux</li>
-                  <li>router</li>
-                <li>jquery</li>
-
-                <li>electron</li>
-                
-                <li>ajax</li>
-
-                
-                
-                
-                <li>Web Payment API</li>
-                <li>Jest</li>
-                <li>handlebars</li>
-                </ul>
-
-              <div className={css.listTitle}>design</div>
-              <div className={css.listTitle}>technologies</div>
-              <ul className={css.skillList}>
-                <li>sass</li>
-              <li>Web Animation API</li>
-                
-                
-              </ul>
-              <div className={css.listTitle}>libraries</div>
-              <ul className={css.skillList}>
-              <li>Framer Motion</li>
-                <li>MaterialUI</li>
-                <li>Bootstrap</li>
-                <li>KendoJS</li>
-                {/* <li>zdog</li> */}
-              </ul>
-              <div className={css.listTitle}>software</div>
-              <ul className={css.skillList}>
-                <li>photoshop</li>
-                <li>affinity designer</li>
-                <li>aseprite</li>
-              </ul>
-
-              <div className={css.listTitle}>backend</div>
-              <div className={css.listTitle}>technologies</div>
-              <ul className={css.skillList}>
-                <li>web server</li>
-                  <li>http/s</li>
-                    <li>RESTful API</li>
-                <li>modules & packages</li>
-                 <li>dotenv</li>
-                <li>Built-in Libraries</li>
-                <li>Events</li>
-                <li>Streams</li>
-                  <li>protocols</li>
-                    <li>tcp/udp</li>
-                    <li>rtmp</li>
-                    <li>webRTC</li>
-
-                    <li>smtp</li>
-
-                    <li>ftp</li>
-
-                    <li>ssh</li>
-
-                    <li>web3</li>
-                <li>json</li>
-                
-
-              </ul>
-
-              <div className={css.listTitle}>libraries</div>
-              <ul className={css.skillList}>
-                <li>express</li>
-                <li>nginx</li>
-                {/* <li>mongoose</li> */}
-                {/* <li>sequelize</li> */}
-                <li>flask</li>
-                <li>bcrypt</li>
-                <li>Web Sockets</li>
-                {/* <li>bcrypt</li> */}
-              </ul>
-
-              <div className={css.listTitle}>cloud</div>
-              <div className={css.listTitle}>technologies</div>
-              <ul className={css.skillList}>
-
-                  <li>aws</li>
-                  <li>gcp</li>
-                  <li>azure</li>
-                  <li>firebase</li>
-                  <li>heroku</li>
-                </ul>
-
-              <div className={css.listTitle}>database</div>
-
-              <div className={css.listTitle}>orm</div>
-              
-              <ul className={css.skillList}>
-              
-                <li>sequelize</li>
-                </ul>
-
-              <ul className={css.skillList}>libraries
-
-                <li>mongoose</li>
-                </ul>
-
-              <ul className={css.skillList}>
-
-                <li>postgresql</li>
-                <li>mysql</li>
-                <li>mongodb</li>
-                <li>firestore</li>
-                <li>oracle</li>
-                </ul>
-
-                
-
-
-              
-
-              
-            </div>
-            
-            :
-            null
-            }
-        
-
+      <div className={css.categoryWrapper}>
+        <div className={`${css.category} ${skillsFilter === 'Core' ? css.title_Core: ''}`} onClick={() => handleFilter("Core")}>
+          Core
         </div>
-    )
+        <div className={`${css.category} ${skillsFilter === 'Frontend' ? css.title_Frontend: ''}`} onClick={() => handleFilter("Frontend")}>
+          Frontend
+        </div>
+        <div className={`${css.category} ${skillsFilter === 'Backend' ? css.title_Backend: ''}`} onClick={() => handleFilter("Backend")}>
+          Backend
+        </div>
+        <div className={`${css.category} ${skillsFilter === 'Devops' ? css.title_Devops: ''}`} onClick={() => handleFilter("Devops")}>
+          Devops & Architecture
+        </div>
+        <div className={`${css.category} ${skillsFilter === 'Database' ? css.title_Database: ''}`} onClick={() => handleFilter("Database")}>
+          DBM
+        </div>
+        <div className={`${css.category} ${skillsFilter === 'Design' ? css.title_Design: ''}`} onClick={() => handleFilter("Design")}>
+          Design
+        </div>
+
+      </div>
+          
+        
+      <div className={css.skillContainer}>
+        <div className={css.listTitle}>Languages</div>
+        <Skill title={"JavaScript"}   tags={["Core", "Frontend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Node"}         tags={["Core", "Backend"]}                skillsFilter={skillsFilter} />
+        <Skill title={"TypeScript"}   tags={["Core", "Frontend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Solidity"}     tags={["Core", "Blockchain"]}             skillsFilter={skillsFilter} />
+        <Skill title={"C++"}          tags={["Core"]}                           skillsFilter={skillsFilter} />
+        <Skill title={"Python"}       tags={["Backend"]}                        skillsFilter={skillsFilter} />
+        <Skill title={"SQL"}          tags={["Core", "Backend", "Database"]}    skillsFilter={skillsFilter} />
+
+        <div className={css.listTitle}>OS</div>
+        <Skill title={"Windows"}    tags={["Core"]}               skillsFilter={skillsFilter} />
+        <Skill title={"WSL"}        tags={["Core", "Devops"]}     skillsFilter={skillsFilter} />
+        <Skill title={"Unix"}       tags={["Core"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Terminal"}   tags={["Core", "Backend"]}    skillsFilter={skillsFilter} />
+
+        <div className={css.listTitle}>Operations</div>
+        <Skill title={"Git"}      tags={["Core"]}              skillsFilter={skillsFilter} />
+        <Skill title={"Github"}   tags={["Core"]}              skillsFilter={skillsFilter} />
+        <Skill title={"Agile"}    tags={["Core", "Devops"]}    skillsFilter={skillsFilter} />
+        <Skill title={"Scrum"}    tags={["Core", "Devops"]}    skillsFilter={skillsFilter} />
+        <Skill title={"Kanban"}   tags={["Devops"]}            skillsFilter={skillsFilter} />
+        <Skill title={"Jira"}     tags={["Core", "Devops"]}    skillsFilter={skillsFilter} />
+        <Skill title={"CI/CD"}    tags={["Devops"]}            skillsFilter={skillsFilter} />
+
+        <div className={css.listTitle}>Libraries</div>
+        <Skill title={"React"}                tags={["Frontend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Redux"}                tags={["Frontend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Router"}               tags={["Frontend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Jest"}                 tags={["Frontend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"PyTest"}               tags={["Frontend", "Backend"]}    skillsFilter={skillsFilter} />
+        <Skill title={"jQuery"}               tags={["Frontend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Electron"}             tags={["Frontend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Handlebars"}           tags={["Frontend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Ajax"}                 tags={["Frontend", "Backend"]}    skillsFilter={skillsFilter} />
+        <Skill title={"Web Payment API"}      tags={["Frontend", "Backend"]}    skillsFilter={skillsFilter} />
+        <Skill title={"Bitcoin Payment API"}  tags={["Backend", "Blockchain"]}  skillsFilter={skillsFilter} />
+        <Skill title={"Express"}              tags={["Backend"]}                skillsFilter={skillsFilter} />
+        <Skill title={"Django"}               tags={["Backend"]}                skillsFilter={skillsFilter} />
+        <Skill title={"NGINX"}                tags={["Backend"]}                skillsFilter={skillsFilter} />
+        <Skill title={"bcrypt"}               tags={["Frontend", "Backend", "Blockchain"]}  skillsFilter={skillsFilter} />
+        <Skill title={"Web Sockets"}          tags={["Frontend", "Backend"]}   skillsFilter={skillsFilter} />
+        <Skill title={"Framer Motion"}        tags={["Frontend", "Design"]}    skillsFilter={skillsFilter} />
+        <Skill title={"React Flow"}           tags={["Frontend", "Design"]}    skillsFilter={skillsFilter} />
+        <Skill title={"MaterialUI"}           tags={["Frontend", "Design"]}    skillsFilter={skillsFilter} />
+        <Skill title={"Bootstrap"}            tags={["Frontend", "Design"]}    skillsFilter={skillsFilter} />
+        <Skill title={"KendoJS"}              tags={["Frontend", "Design"]}    skillsFilter={skillsFilter} />
+        <Skill title={"Sequelize"}            tags={["Backend", "Database"]}   skillsFilter={skillsFilter} />
+        <Skill title={"Mongoose"}             tags={["Backend", "Database"]}   skillsFilter={skillsFilter} />
+
+        <div className={css.listTitle}>Technologies</div>
+        <Skill title={"HTML"}                 tags={["Frontend"]}              skillsFilter={skillsFilter} />
+        <Skill title={"CSS"}                  tags={["Frontend", "Design"]}    skillsFilter={skillsFilter} />
+        <Skill title={"SVG"}                  tags={["Frontend", "Design"]}    skillsFilter={skillsFilter} />
+        <Skill title={"CSS Grid"}             tags={["Frontend", "Design"]}    skillsFilter={skillsFilter} />
+        <Skill title={"FlexBox"}              tags={["Frontend", "Design"]}    skillsFilter={skillsFilter} />
+        <Skill title={"Media Queries"}        tags={["Frontend", "Design"]}    skillsFilter={skillsFilter} />
+        <Skill title={"SASS"}                 tags={["Frontend"]}              skillsFilter={skillsFilter} />
+        <Skill title={"LESS"}                 tags={["Frontend"]}              skillsFilter={skillsFilter} />
+        <Skill title={"Web Animation API"}    tags={["Frontend", "Design"]}    skillsFilter={skillsFilter} />
+        <Skill title={"Web Server"}           tags={["Backend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"HTTP/HTTPS"}           tags={["Backend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"RESTful API"}          tags={["Backend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Niagara"}              tags={["Backend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Modules & Packages"}   tags={["Backend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"dotenv"}               tags={["Backend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Events"}               tags={["Backend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"JSON"}                 tags={["Backend", "Frontend"]}   skillsFilter={skillsFilter} />
+        <Skill title={"Streams"}              tags={["Backend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Protocols"}            tags={["Backend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"TCP/UDP"}              tags={["Backend", "Media"]}      skillsFilter={skillsFilter} />
+        <Skill title={"rtmp"}                 tags={["Backend", "Media"]}      skillsFilter={skillsFilter} />
+        <Skill title={"WebRTC"}               tags={["Backend", "Media"]}      skillsFilter={skillsFilter} />
+        <Skill title={"smtp"}                 tags={["Backend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"ftp"}                  tags={["Backend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"ssh"}                  tags={["Backend"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Web3"}                 tags={["Frontend", "Backend", "Blockchain"]}  skillsFilter={skillsFilter} />
+        <Skill title={"Bash"}                 tags={["Core", "Backend"]}      skillsFilter={skillsFilter} />
+        <Skill title={"Powershell"}           tags={["Core", "Backend"]}      skillsFilter={skillsFilter} />
+        <Skill title={"AWS"}                  tags={["Devops"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Firebase"}             tags={["Devops"]}               skillsFilter={skillsFilter} />
+        <Skill title={"GCP"}                  tags={["Devops"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Azure"}                tags={["Devops"]}               skillsFilter={skillsFilter} />
+        <Skill title={"Docker"}               tags={["Devops"]}               skillsFilter={skillsFilter} />
+        <Skill title={"npm"}                  tags={["Devops"]}               skillsFilter={skillsFilter} />
+        <Skill title={"PostgreSQL"}           tags={["Database"]}             skillsFilter={skillsFilter} />
+        <Skill title={"Tiger Data"}           tags={["Database"]}             skillsFilter={skillsFilter} />
+        <Skill title={"MySQL"}                tags={["Database"]}             skillsFilter={skillsFilter} />
+        <Skill title={"Firestore"}            tags={["Database"]}             skillsFilter={skillsFilter} />
+        <Skill title={"MongoDB"}              tags={["Database"]}             skillsFilter={skillsFilter} />
+        <Skill title={"Oracle"}               tags={["Database"]}             skillsFilter={skillsFilter} />
+
+        <div className={css.listTitle}>Software</div>
+        <Skill title={"Adobe PS"}            tags={["Media"]}           skillsFilter={skillsFilter} />
+        <Skill title={"Adobe AE"}            tags={["Media"]}           skillsFilter={skillsFilter} />
+        <Skill title={"Affinity"}            tags={["Design"]}          skillsFilter={skillsFilter} />
+        <Skill title={"Aseprite"}            tags={["Media"]}           skillsFilter={skillsFilter} />
+        <Skill title={"Final Cut"}           tags={["Media"]}           skillsFilter={skillsFilter} />
+        <Skill title={"Ableton Live"}        tags={["Media"]}           skillsFilter={skillsFilter} />
+      </div>
+    </div>
+  )
 }
 
-// const Skill = props => {
+const Skill = props => {
+  
+  const {title, tags, skillsFilter } = props;
 
-//   const {title, tags, skillCss } = props;
+  const [activeFilter, setActiveFilter] = useState("")
+  
+  useEffect(() => {
+    setActiveFilter("")
+    if (tags.includes(skillsFilter)) {
+      setActiveFilter(skillsFilter)
+    }
+  }, [tags, skillsFilter, activeFilter])
+  
 
-//   const titleRef = useRef(null)
-
-
-//   return (
-      
-//       <div className={`${css.skillWrapper} ${skillCss}`} title={`${tags.map(t => `#${t} `)}`}> 
-//         <div>{title}</div>
-          
-//       </div>
-//   )
-// }
+  return (
+    skillsFilter === "" || skillsFilter === activeFilter ?
+    <div className={`${css.skillWrapper} ${ activeFilter ? css[`style_${activeFilter}`] : ""}`} title={`${tags.map(t => `#${t} `)}`}> 
+      <div>{title}</div>
+    </div>
+    :
+    null
+  )
+}
 
 export default Skills;
-
-
-
-
-/*
-<li>golang</li>
-
-<li className="faded">webassembly</li>
- Serverless Function
-
-                Lambda Functions
-
-
-*/

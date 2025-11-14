@@ -101,20 +101,10 @@
         
         .subtitle {
             padding-bottom: 180px;
-            animation: 30s colorRotate linear infinite;
             border-top: 2px solid;
             padding-top: 12px;
-            width: 50%;
+            width: 40%;
             font-weight: 300;
-        }
-        @keyframes colorRotate {
-            0% {color: $grn;}
-            30% {color: $grn;}
-            33% {color: $red;}
-            63% {color: $red;}
-            66% {color: $orn;}
-            96% {color: $orn;}
-            100% {color: $grn;}
         }
         
 

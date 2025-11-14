@@ -2,15 +2,131 @@
 
 .skills {
     width: 100%;
+    height: calc(100vh - 60px);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color: $blk;
+    width: 640px;
 
-    .layer {
-        font-size: 2rem;
-        color: $gry;
+
+    .categoryWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .category {
+            font-size: 1.2rem;
+            color: $gry;
+            cursor: pointer;
+        }
+
     }
 
-    li {
-        list-style-type: none;
+
+    .skillContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        overflow-y:scroll;
+        background-color: lightgray;
+        scrollbar-width: none; /* "auto" | "thin" | "none" */
+
+    }
+    
+    .listTitle {
+        color: $whi;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        min-height: 80px;
+        max-height: 80px;
+        
+    }
+
+
+    .skillList {
+        display: grid;
+        max-width: 900px;
+        grid-template-columns: repeat(auto-fill, 150px);
+        grid-template-rows: 100px 100px;
+
+    }
+
+    .skillWrapper {
+        width: 80px;
+        height: 80px;
+        padding: 5px;
+        box-sizing: border-box;
+        background-color: lightgrey;
+        font-size: 0.9rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+
+        &:hover {
+            text-decoration: underline;
+            opacity: 0.7;
+        }
+    }
+
+
+    .style_Core {
+        background-color: $grn;
+    }
+    .style_Backend {
+        background-color: $orn;
+    }
+    .style_Frontend {
+        background-color: $pnk;
+    }
+    .style_Design {
+        background-color: $blu;    
+    }
+    .style_Database {
+        background-color: $slv;
+    }
+    .style_Devops {
+        background-color: $vio;
+    }
+
+
+
+    .title_Core {
+        color: $grn !important;
+    }
+    .title_Backend {
+        color: $orn !important;
+    }
+    .title_Frontend {
+        color: $pnk !important;
+    }
+    .title_Design {
+        color: $blu !important;
+    }
+    .title_Database {
+        color: $slv !important;
+    }
+    .title_Devops {
+        color: $vio !important;
+    }
+
+    
+}
+
+@media only screen and (max-width: 767px) {
+    .skills {
+        width: 100%;
+    }
+    .categoryWrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }

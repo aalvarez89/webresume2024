@@ -120,7 +120,7 @@ const Shell = () => {
                         >
                             <motion.li variants={itemVariants} onClick={() => handleNavigate('bio')}>Hello</motion.li>
                             <motion.li variants={itemVariants} onClick={() => handleNavigate('portfolio')}>Portfolio</motion.li>
-                            {/* <motion.li variants={itemVariants} onClick={() => handleNavigate('skills')}>Skills</motion.li> */}
+                            <motion.li variants={itemVariants} onClick={() => handleNavigate('skills')}>Skills</motion.li>
                             <motion.li variants={itemVariants} onClick={() => handleNavigate('social')}>Contact</motion.li>
                             <motion.li variants={itemVariants} onClick={() => handleNavigate('blog')}>Missive</motion.li>
                         </motion.ul>

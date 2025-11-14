@@ -116,9 +116,9 @@ const Landing = () => {
                                 PORTFOLIO
                                 </div>
 
-                                {/* <div className={css.portfolioMenu} onClick={() => handleNavigate("skills")}>
+                                <div className={css.portfolioMenu} onClick={() => handleNavigate("skills")}>
                                 SKILLS
-                                </div> */}
+                                </div>
 
                                 <div className={css.portfolioMenu} onClick={() => handleNavigate("social")}>
                                 CONTACT
