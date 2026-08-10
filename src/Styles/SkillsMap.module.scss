@@ -1,0 +1,11 @@
+@import './App.module.scss';
+
+.canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    // Nodes are hit-tested against their label boxes, so the cursor should suggest
+    // the labels are live.
+    cursor: crosshair;
+    touch-action: pan-y;
+}

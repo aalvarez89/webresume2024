@@ -174,7 +174,9 @@
         font-size: 3.6em;
     }
 
-    li {
+    // Scoped to .portfolio: a bare `li` here isn't hashed by CSS Modules, so it
+    // leaked to every <li> on the site.
+    .portfolio li {
         width: 82%;
     }
 }
@@ -189,7 +191,7 @@
         font-size: 2.4em;
     }
 
-    li {
+    .portfolio li {
         // width: 100%;
         padding-right: 20px;
     }
