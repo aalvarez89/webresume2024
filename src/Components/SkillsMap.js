@@ -36,7 +36,14 @@ const PAPER = '#FFFBFA';
 
 // Ring seats, ordered so the heaviest clusters land opposite each other instead of
 // crowding one corner. Categories are sorted by weight and dealt into these seats.
-const SEATS = [0, 4, 2, 6, 1, 5, 3, 7];
+// Each step is about half a ring, and coprime with the count so no seat repeats —
+// generated rather than written out, so adding a discipline can't leave one seatless.
+const seatOrder = count => {
+    const gcd = (a, b) => (b ? gcd(b, a % b) : a);
+    let step = Math.max(1, Math.round(count / 2));
+    while (gcd(step, count) !== 1) step -= 1;
+    return Array.from({ length: count }, (_, i) => (i * step) % count);
+};
 
 const hexToRgba = (hex, alpha) => {
     const h = hex.trim().replace('#', '');
@@ -81,8 +88,9 @@ const SkillsMap = ({ categories, skills, activeFilter, onHoverChange }) => {
         let width = 0;
         let height = 0;
 
+        const seats = seatOrder(categories.length);
         const byWeight = [...categories].sort((a, b) => b.weight - a.weight);
-        const seatOf = byWeight.reduce((acc, cat, i) => ({ ...acc, [cat.id]: SEATS[i] }), {});
+        const seatOf = byWeight.reduce((acc, cat, i) => ({ ...acc, [cat.id]: seats[i] }), {});
 
         const hubs = categories.map(cat => ({
             id: cat.id,

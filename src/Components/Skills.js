@@ -17,6 +17,7 @@ const CATEGORIES = [
   { id: "Design",     label: "design",     color: palette.blu },
   { id: "Blockchain", label: "blockchain", color: palette.ylw },
   { id: "Media",      label: "media",      color: palette.red },
+  { id: "AI",         label: "ai",         color: palette.ind },
   // { id: "Specialization", label: "special",      color: palette.red },
 ];
 
@@ -53,6 +54,18 @@ const SKILL_GROUPS = [
       { title: "Kanban", tags: ["Devops"] },
       { title: "Jira",   tags: ["Devops", "Core"] },
       { title: "CI/CD",  tags: ["Devops"] },
+    ],
+  },
+  {
+    section: "AI",
+    skills: [
+      { title: "Claude Code",              tags: ["AI", "Core"] },
+      { title: "OpenAI Codex",             tags: ["AI", "Core"] },
+      { title: "Agentic Coding Workflows", tags: ["AI", "Devops"] },
+      { title: "Prompt Engineering",       tags: ["AI", "Frontend"] },
+      { title: "MCP",                      tags: ["AI", "Frontend"] },
+      { title: "AI-Assisted Development",  tags: ["AI", "Core"] },
+      { title: "AI Code Review",           tags: ["AI", "Devops"] },
     ],
   },
   {
