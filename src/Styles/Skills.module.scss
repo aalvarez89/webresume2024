@@ -1,5 +1,7 @@
 @import './App.module.scss';
 
+// Media was $red, which sits ~5 CIE94 units from Frontend's $pnk — the two hubs read as
+// one colour on the map. $cyn is the furthest bright cool tone from that red family.
 $categories: (
     Core:       $grn,
     Frontend:   $pnk,
@@ -8,7 +10,7 @@ $categories: (
     Database:   $slv,
     Design:     $blu,
     Blockchain: $ylw,
-    Media:      $red,
+    Media:      $cyn,
     AI:         $ind,
 );
 
@@ -106,6 +108,10 @@ $categories: (
         display: inline-flex;
         align-items: baseline;
         gap: 7px;
+
+        // Chips size to their label — a two-word one must not wrap inside the pill.
+        flex: 0 0 auto;
+        white-space: nowrap;
 
         margin: 0;
         padding: 7px 13px;
